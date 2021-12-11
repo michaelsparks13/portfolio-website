@@ -92,6 +92,8 @@
     color: #FDF9D8;
   }
 
+  
+
   .cards {
     display: flex;
     justify-content: space-around;
@@ -113,6 +115,10 @@
     padding-top: 5%;
     text-decoration: none;
     color: #FDF9D8;
+  }
+
+  .software {
+    color: #841617;
   }
   
   .main-two img {

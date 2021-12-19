@@ -49,6 +49,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
   }
   
   .main-one img {
@@ -80,6 +81,7 @@
     align-items: center;
     padding-bottom: 10%;
     padding-top: 3%;
+    height: 100vh;
   }
   
   .main-two h2 {
@@ -92,7 +94,6 @@
     color: #FDF9D8;
   }
 
-  
 
   .cards {
     display: flex;
@@ -122,8 +123,8 @@
   }
   
   .main-two img {
-    width: 40%;
-    height: 50%;
+    width: 30%;
+    height: 90%;
     border-radius: 50%;
   }
 

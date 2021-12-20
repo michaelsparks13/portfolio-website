@@ -4,6 +4,8 @@ const myNav = document.querySelector("ul");
 
 
 
+
+
 /* HELPER FUNCTIONS */
 
 function createNavItem() {
@@ -19,6 +21,7 @@ function createNavItem() {
     }
 }
 
+const navItems = document.querySelector("ul li");
 
 function sectionInView(element) {
     let sectionPos = element.getBoudingClientRect();
@@ -44,15 +47,3 @@ function toggleActiveClass() {
 createNavItem();
 
 document.addEventListener("scroll", toggleActiveClass);
-
-// for scrolling & active state you can use querySelectorAll and list[index].textContent 
-
-// function activeNav() {
-//     const navToActivate = document.querySelectorAll(".nav-link")
-
-//     navToActivate[0].addEventListener("click", function() {
-//         navToActivate[0].style.textDecoration = "underline"
-//     })
-//     navToActivate[1].addEventListener
-
-// }

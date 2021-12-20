@@ -14,22 +14,15 @@
   }
   
   nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: #841617;
     color: #FDF9D8;
-  }
-  
-  nav h3 {
-    font-size: 24px;
-    margin-left: 15%;
   }
   
   ul {
     list-style-type: none;
     display: flex;
-    gap: 12px;
+    justify-content: flex-end;
+    gap: 25px;
     margin-right: 5%;
   }
   

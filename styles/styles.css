@@ -18,7 +18,7 @@ html {
     display: flex;
     justify-content: flex-end;
     gap: 25px;
-    margin-right: 5%;
+    margin-right: 3%;
     margin-top: 1.5%;
   }
   
@@ -136,9 +136,18 @@ html {
     font-weight: bold;
     padding-top: 2%;
     text-decoration: none;
-    color: #841617;
+    color:#841617;
+  }
+
+  .info.software {
+    color:#FDF9D8;
   }
   
+  #sketch {
+    text-decoration: none;
+    color:#FDF9D8;
+  }
+
   .main-two img {
     width: 40%;
     height: 100%;

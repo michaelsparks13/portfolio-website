@@ -27,16 +27,19 @@ function gridDensity() {
     document.getElementById("low-density").addEventListener("click", 
     function() {
         generateGrid(16*22, "low")
+        draw();
     });
 
     document.getElementById("medium-density").addEventListener("click", 
     function() {
         generateGrid(32 * 44, "medium-default")
+        draw();
     });
 
     document.getElementById("high-density").addEventListener("click", 
     function() {
         generateGrid(64 * 88, "high")
+        draw();
     });
 }
 

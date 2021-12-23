@@ -51,7 +51,7 @@ const btns = document.querySelectorAll("button");
 
 function styleButtons() {
     for (btn of btns) {
-        btn.className = "btn btn-dark";
+        btn.className = "btn btn-light";
         btn.style.margin = "5px";
     }
 }
@@ -61,7 +61,9 @@ styleButtons();
 //text styling
 
 const heading = document.querySelector("h1");
-heading.className = "display-3"; // might have to come back to later and make responsive
+heading.className = "display-2"; // might have to come back to later and make responsive
+heading.style.color = '#d9ffbc'
+heading.style.fontFamily = "cursive"
 
 
 const labels = document.getElementsByClassName("label");
@@ -107,14 +109,7 @@ const modernColors = ['#fefefe', '#dedae3', '#86b9ce', '#7772e2', '#4274fd', '#6
 // MODERN COLORS
 
 function draw() {
-    //for each div in grid container
-    //add event listener
-    //listen for mouseEnter
-    //if mode == normal, change background color to slightly darker
-    //if mode == modern, change to one of colors a,b,c
-    //if mode == cotton candy, change to one of colors x,y,z
-    
-//HOW DO I GET IT TO BE RANDOM FOR EACH SQUARE
+   
 
     for (div of divs) {
         div.addEventListener("mouseenter", (e) => {
@@ -137,10 +132,7 @@ const eraseBtn = document.querySelector("#erase")
 const defaultGrey = 'rgb(220, 220, 220)'
 
 function erase() {
-//     //for button id erase
-//     //add event listener
-//     //listen for click
-//     //for each div, change background color to default
+
        eraseBtn.addEventListener("click", (e) => {
            for (div of divs) {
                div.style.backgroundColor = defaultGrey;

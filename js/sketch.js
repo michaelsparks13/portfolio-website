@@ -102,7 +102,7 @@ const divs = document.getElementsByClassName("grid-square")
 
 // PSYCHEDELIC COLORS
 const psychedelicColors = ['#46FF31', '#31FFCD', '#3180FF', '#9231FF', '#FF31BB', '#FF5731', '#F6FF31']
-
+const modernColors = ['#fefefe', '#dedae3', '#86b9ce', '#7772e2', '#4274fd', '#62c799', '#fba66c', '#fdd149']
 
 // MODERN COLORS
 
@@ -121,7 +121,8 @@ function draw() {
             if (activeMode == 'Normal') {
                 e.target.style.backgroundColor = 'rgb(150, 150, 150';
             } else if (activeMode == "Modern") {
-                e.target.style.backgroundColor = 'red';
+                let random = Math.floor(Math.random() * modernColors.length);
+                e.target.style.backgroundColor = modernColors[random];
             } else if (activeMode == "Psychedelic") {
                 let random = Math.floor(Math.random() * psychedelicColors.length);
                 e.target.style.backgroundColor = psychedelicColors[random];

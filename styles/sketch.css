@@ -68,3 +68,7 @@ main {
     align-items: baseline;
     margin-top: 2%;
 }
+
+.label {
+    margin-left: -5%;
+}

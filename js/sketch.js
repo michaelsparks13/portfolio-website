@@ -51,8 +51,12 @@ const btns = document.querySelectorAll("button");
 
 function styleButtons() {
     for (btn of btns) {
+        if (btn.id == "erase") {
+            btn.className = "btn btn-danger"
+        } else {
         btn.className = "btn btn-light";
         btn.style.margin = "5px";
+        }
     }
 }
 

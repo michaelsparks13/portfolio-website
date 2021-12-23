@@ -73,22 +73,18 @@ styleLabels();
 
 // draw
 
-let activeMode = ''
+let activeMode = 'Normal'
 
-
-// function saveText(e) {
-//     activeMode = e.textContent;
-// }
 
 const modes = document.querySelectorAll(".mode button")
 
 function currentMode() {
-     for (mde in modes) {
-         mde.addEventListener("click", (e) => {
-             activeMode = e.target.textContent;
-             console.log(activeMode);
-        })
-    }
+    for (mode of modes) {
+        mode.addEventListener("click", (e) => {
+            activeMode = e.target.textContent;
+            console.log(activeMode);
+       })
+   }
 }
 
 currentMode();
@@ -104,9 +100,31 @@ function draw() {
     //if mode == modern, change to one of colors a,b,c
     //if mode == cotton candy, change to one of colors x,y,z
 
+// RANDOM    const randomElement = array[Math.floor(Math.random() * array.length)];
+// https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
+
+// PSYCHEDELIC COLORS
+const psychedelicColors = ['#46FF31', '#31FFCD', '#3180FF', '#9231FF', '#FF31BB', '#FF5731', '#F6FF31']
+let random = Math.floor(Math.random() * psychedelicColors.length);
+
+// MODERN COLORS
+
+
+//list of colors
+//generate a random number btwn 0 and length - 1
+//select the item at array[random]
+//pass through
+//HOW DO I GET IT TO BE RANDOM FOR EACH SQUARE
+
     for (div of divs) {
         div.addEventListener("mouseenter", (e) => {
-            e.target.style.backgroundColor = 'rgb(100, 100, 100';
+            if (activeMode == 'Normal') {
+                e.target.style.backgroundColor = 'rgb(150, 150, 150';
+            } else if (activeMode == "Modern") {
+                e.target.style.backgroundColor = 'red';
+            } else if (activeMode == "Psychedelic") {
+                e.target.style.backgroundColor = psychedelicColors[random];
+            }         
         })
     }
 }

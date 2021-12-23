@@ -92,6 +92,17 @@ currentMode();
 
 const divs = document.getElementsByClassName("grid-square")
 
+
+
+// RANDOM    const randomElement = array[Math.floor(Math.random() * array.length)];
+// https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
+
+// PSYCHEDELIC COLORS
+const psychedelicColors = ['#46FF31', '#31FFCD', '#3180FF', '#9231FF', '#FF31BB', '#FF5731', '#F6FF31']
+
+
+// MODERN COLORS
+
 function draw() {
     //for each div in grid container
     //add event listener
@@ -99,21 +110,7 @@ function draw() {
     //if mode == normal, change background color to slightly darker
     //if mode == modern, change to one of colors a,b,c
     //if mode == cotton candy, change to one of colors x,y,z
-
-// RANDOM    const randomElement = array[Math.floor(Math.random() * array.length)];
-// https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
-
-// PSYCHEDELIC COLORS
-const psychedelicColors = ['#46FF31', '#31FFCD', '#3180FF', '#9231FF', '#FF31BB', '#FF5731', '#F6FF31']
-let random = Math.floor(Math.random() * psychedelicColors.length);
-
-// MODERN COLORS
-
-
-//list of colors
-//generate a random number btwn 0 and length - 1
-//select the item at array[random]
-//pass through
+    
 //HOW DO I GET IT TO BE RANDOM FOR EACH SQUARE
 
     for (div of divs) {
@@ -123,6 +120,7 @@ let random = Math.floor(Math.random() * psychedelicColors.length);
             } else if (activeMode == "Modern") {
                 e.target.style.backgroundColor = 'red';
             } else if (activeMode == "Psychedelic") {
+                let random = Math.floor(Math.random() * psychedelicColors.length);
                 e.target.style.backgroundColor = psychedelicColors[random];
             }         
         })

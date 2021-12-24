@@ -22,23 +22,30 @@ generateGrid();
 
 
 //size the grid
+//RECTOR BECAUSE: ONLY BUTTON ON AT ONCE, DON'T REPEAT YOURSELF
 
 function gridDensity() {
     document.getElementById("low-density").addEventListener("click", 
     function() {
         generateGrid(16*22, "low")
+        document.getElementById("low-density").setAttribute("aria-pressed", "true")
+        document.getElementById("low-density").classList.toggle("active")
         draw();
     });
 
     document.getElementById("medium-density").addEventListener("click", 
     function() {
         generateGrid(32 * 44, "medium-default")
+        document.getElementById("medium-density").setAttribute("aria-pressed", "true")
+        document.getElementById("medium-density").classList.toggle("active")
         draw();
     });
 
     document.getElementById("high-density").addEventListener("click", 
     function() {
         generateGrid(64 * 88, "high")
+        document.getElementById("high-density").setAttribute("aria-pressed", "true")
+        document.getElementById("high-density").classList.toggle("active")
         draw();
     });
 }
@@ -91,7 +98,6 @@ function currentMode() {
     for (mode of modes) {
         mode.addEventListener("click", (e) => {
             activeMode = e.target.textContent;
-            console.log(activeMode);
        })
    }
 }

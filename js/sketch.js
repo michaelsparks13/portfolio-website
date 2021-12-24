@@ -100,25 +100,20 @@ currentMode();
 
 
 const divs = document.getElementsByClassName("grid-square")
-
-
-
-// RANDOM    const randomElement = array[Math.floor(Math.random() * array.length)];
-// https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
-
-// PSYCHEDELIC COLORS
 const psychedelicColors = ['#46FF31', '#31FFCD', '#3180FF', '#9231FF', '#FF31BB', '#FF5731', '#F6FF31']
-const modernColors = ['#fefefe', '#dedae3', '#86b9ce', '#7772e2', '#4274fd', '#62c799', '#fba66c', '#fdd149']
+const modernColors = ['#1f1f1f', '#86b9ce', '#7772e2', '#4274fd', '#62c799', '#fba66c', '#fdd149']
 
-// MODERN COLORS
+
 
 function draw() {
    
-
     for (div of divs) {
+        div.count = 0;
         div.addEventListener("mouseenter", (e) => {
             if (activeMode == 'Normal') {
                 e.target.style.backgroundColor = 'rgb(150, 150, 150';
+                e.target.count++;
+                e.target.style.opacity = e.target.count * 0.2;
             } else if (activeMode == "Modern") {
                 let random = Math.floor(Math.random() * modernColors.length);
                 e.target.style.backgroundColor = modernColors[random];
@@ -140,6 +135,7 @@ function erase() {
        eraseBtn.addEventListener("click", (e) => {
            for (div of divs) {
                div.style.backgroundColor = defaultGrey;
+               div.style.opacity = 1;
            }
        }) 
 }

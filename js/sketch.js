@@ -16,6 +16,7 @@ function generateGrid(size = 32 * 44, cssClass = "medium-default") {
         gridContainer.appendChild(square);
     }
 
+
 }
 
 generateGrid();
@@ -28,24 +29,30 @@ function gridDensity() {
     document.getElementById("low-density").addEventListener("click", 
     function() {
         generateGrid(16*22, "low")
-        // document.getElementById("low-density").setAttribute("aria-pressed", "true")
-        // document.getElementById("low-density").classList.toggle("active")
+        document.getElementById("low-density").setAttribute("aria-pressed", "true")
+        document.getElementById("low-density").classList.add("active")
+        document.getElementById("medium-density").classList.remove("active")
+        document.getElementById("high-density").classList.remove("active")
         draw();
     });
 
     document.getElementById("medium-density").addEventListener("click", 
     function() {
         generateGrid(32 * 44, "medium-default")
-        // document.getElementById("medium-density").setAttribute("aria-pressed", "true")
-        // document.getElementById("medium-density").classList.toggle("active")
+        document.getElementById("medium-density").setAttribute("aria-pressed", "true")
+        document.getElementById("medium-density").classList.add("active")
+        document.getElementById("high-density").classList.remove("active")
+        document.getElementById("low-density").classList.remove("active")
         draw();
     });
 
     document.getElementById("high-density").addEventListener("click", 
     function() {
         generateGrid(64 * 88, "high")
-        // document.getElementById("high-density").setAttribute("aria-pressed", "true")
-        // document.getElementById("high-density").classList.toggle("active")
+        document.getElementById("high-density").setAttribute("aria-pressed", "true")
+        document.getElementById("high-density").classList.add("active")
+        document.getElementById("medium-density").classList.remove("active")
+        document.getElementById("low-density").classList.remove("active")
         draw();
     });
 }
@@ -92,19 +99,37 @@ styleLabels();
 let activeMode = 'Normal'
 
 
-const modeDenBtn = document.querySelectorAll(".mode-den")
+const modes = document.querySelectorAll(".mode button")
+// const modeDen = document.querySelectorAll(".mode-den")
 
-function selectButton(button) {
-    if (button.classList.contains('mode-den')) {
-      modeButtons.forEach((selection) => {
-        selection.classList.remove('active');
-      });
-    } else {
-       button.classList.add('active');
-    }
-  }
-// NOW YOU'VE CREATED A WAY TO TAKE A BUTTON AND REMOVE THE ACTIVE CLASS AND ADD IT TO THE RIGHT ONES
-// BUT YOU NEED TO ADD THIS IN THE CORRECT PLACE SO IT TAKES THE RIGHT
+
+// function selectButton(button) {
+//     if (button.classList.contains('mode-den')) {
+//       modeDen.forEach((selection) => {
+//         selection.classList.remove('active');
+//       });
+//     } else {
+//       modeDen.forEach((selection) => {
+//         selection.classList.remove('active');
+//       });
+//     }
+//     button.classList.add('active');
+//   }
+
+
+function currentMode() {
+    for (mode of modes) {
+        mode.addEventListener("click", (e) => {
+            activeMode = e.target.textContent;
+       })
+   }
+}
+
+currentMode();
+
+
+
+
 
 
 const divs = document.getElementsByClassName("grid-square")

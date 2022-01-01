@@ -29,7 +29,7 @@ function gridDensity() {
     function() {
         generateGrid(16*22, "low")
         document.getElementById("low-density").setAttribute("aria-pressed", "true")
-        document.getElementById("low-density").classList.toggle("active")
+        // document.getElementById("low-density").classList.toggle("active")
         draw();
     });
 
@@ -37,7 +37,7 @@ function gridDensity() {
     function() {
         generateGrid(32 * 44, "medium-default")
         document.getElementById("medium-density").setAttribute("aria-pressed", "true")
-        document.getElementById("medium-density").classList.toggle("active")
+        // document.getElementById("medium-density").classList.toggle("active")
         draw();
     });
 
@@ -45,7 +45,7 @@ function gridDensity() {
     function() {
         generateGrid(64 * 88, "high")
         document.getElementById("high-density").setAttribute("aria-pressed", "true")
-        document.getElementById("high-density").classList.toggle("active")
+        // document.getElementById("high-density").classList.toggle("active")
         draw();
     });
 }
@@ -92,17 +92,19 @@ styleLabels();
 let activeMode = 'Normal'
 
 
-const modes = document.querySelectorAll(".mode button")
+const modeDenBtn = document.querySelectorAll(".mode-den")
 
-function currentMode() {
-    for (mode of modes) {
-        mode.addEventListener("click", (e) => {
-            activeMode = e.target.textContent;
-       })
-   }
-}
-
-currentMode();
+function selectButton(button) {
+    if (button.classList.contains('mode-den')) {
+      modeButtons.forEach((selection) => {
+        selection.classList.remove('active');
+      });
+    } else {
+       button.classList.add('active');
+    }
+  }
+// NOW YOU'VE CREATED A WAY TO TAKE A BUTTON AND REMOVE THE ACTIVE CLASS AND ADD IT TO THE RIGHT ONES
+// BUT YOU NEED TO ADD THIS IN THE CORRECT PLACE SO IT TAKES THE RIGHT BUTTON
 
 
 const divs = document.getElementsByClassName("grid-square")

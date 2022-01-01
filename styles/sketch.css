@@ -26,8 +26,8 @@ main {
     display: grid;
     grid-template-columns: repeat(44,auto); 
     width: auto;
-    border: 25px solid #bcd9ff;
-    border-radius: 5%;
+    border: 50px solid #bcd9ff;
+    border-radius: 2%;
     background-color: rgb(220, 220, 220);
 }
 
@@ -67,9 +67,8 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: baseline;
-    margin-top: 2%;
+    margin-top: 1%;
+    margin-right: 20px;
+    width: auto;
 }
 
-.label {
-    margin-left: -2%;
-}

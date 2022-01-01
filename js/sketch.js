@@ -28,7 +28,7 @@ function gridDensity() {
     document.getElementById("low-density").addEventListener("click", 
     function() {
         generateGrid(16*22, "low")
-        document.getElementById("low-density").setAttribute("aria-pressed", "true")
+        // document.getElementById("low-density").setAttribute("aria-pressed", "true")
         // document.getElementById("low-density").classList.toggle("active")
         draw();
     });
@@ -36,7 +36,7 @@ function gridDensity() {
     document.getElementById("medium-density").addEventListener("click", 
     function() {
         generateGrid(32 * 44, "medium-default")
-        document.getElementById("medium-density").setAttribute("aria-pressed", "true")
+        // document.getElementById("medium-density").setAttribute("aria-pressed", "true")
         // document.getElementById("medium-density").classList.toggle("active")
         draw();
     });
@@ -44,7 +44,7 @@ function gridDensity() {
     document.getElementById("high-density").addEventListener("click", 
     function() {
         generateGrid(64 * 88, "high")
-        document.getElementById("high-density").setAttribute("aria-pressed", "true")
+        // document.getElementById("high-density").setAttribute("aria-pressed", "true")
         // document.getElementById("high-density").classList.toggle("active")
         draw();
     });
@@ -104,7 +104,7 @@ function selectButton(button) {
     }
   }
 // NOW YOU'VE CREATED A WAY TO TAKE A BUTTON AND REMOVE THE ACTIVE CLASS AND ADD IT TO THE RIGHT ONES
-// BUT YOU NEED TO ADD THIS IN THE CORRECT PLACE SO IT TAKES THE RIGHT BUTTON
+// BUT YOU NEED TO ADD THIS IN THE CORRECT PLACE SO IT TAKES THE RIGHT
 
 
 const divs = document.getElementsByClassName("grid-square")

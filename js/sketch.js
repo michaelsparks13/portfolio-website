@@ -67,9 +67,12 @@ function styleButtons() {
     for (btn of btns) {
         if (btn.id == "erase") {
             btn.className = "btn btn-danger"
-        } else {
-        btn.className = "btn btn-light";
+        } else if (btn.id == "medium-density" || btn.id == "normal") {
+        btn.className = "btn btn-light active";
         btn.style.margin = "5px";
+        } else {
+            btn.className = "btn btn-light";
+            btn.style.margin = "5px";
         }
     }
 }
@@ -100,21 +103,7 @@ let activeMode = 'Normal'
 
 
 const modes = document.querySelectorAll(".mode button")
-// const modeDen = document.querySelectorAll(".mode-den")
 
-
-// function selectButton(button) {
-//     if (button.classList.contains('mode-den')) {
-//       modeDen.forEach((selection) => {
-//         selection.classList.remove('active');
-//       });
-//     } else {
-//       modeDen.forEach((selection) => {
-//         selection.classList.remove('active');
-//       });
-//     }
-//     button.classList.add('active');
-//   }
 
 
 function currentMode() {

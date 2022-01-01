@@ -15,8 +15,6 @@ function generateGrid(size = 32 * 44, cssClass = "medium-default") {
         square.classList.add("grid-square")
         gridContainer.appendChild(square);
     }
-
-
 }
 
 generateGrid();
@@ -101,9 +99,7 @@ styleLabels();
 
 let activeMode = 'Normal'
 
-
 const modes = document.querySelectorAll(".mode button")
-
 
 
 function currentMode() {
@@ -116,9 +112,33 @@ function currentMode() {
 
 currentMode();
 
+function selectMode() {
+    document.getElementById("normal").addEventListener("click", 
+    function() {
+        document.getElementById("normal").setAttribute("aria-pressed", "true")
+        document.getElementById("normal").classList.add("active")
+        document.getElementById("modern").classList.remove("active")
+        document.getElementById("psychedelic").classList.remove("active")
+    });
 
+    document.getElementById("modern").addEventListener("click", 
+    function() {
+        document.getElementById("modern").setAttribute("aria-pressed", "true")
+        document.getElementById("modern").classList.add("active")
+        document.getElementById("normal").classList.remove("active")
+        document.getElementById("psychedelic").classList.remove("active")
+    });
 
+    document.getElementById("psychedelic").addEventListener("click", 
+    function() {
+        document.getElementById("psychedelic").setAttribute("aria-pressed", "true")
+        document.getElementById("psychedelic").classList.add("active")
+        document.getElementById("normal").classList.remove("active")
+        document.getElementById("modern").classList.remove("active")
+    });
+}
 
+selectMode();
 
 
 const divs = document.getElementsByClassName("grid-square")
@@ -147,6 +167,7 @@ function draw() {
     }
 }
 
+
 draw();
 
 const eraseBtn = document.querySelector("#erase")
@@ -155,11 +176,13 @@ const defaultGrey = 'rgb(220, 220, 220)'
 function erase() {
 
        eraseBtn.addEventListener("click", (e) => {
+           eraseBtn.setAttribute("aria-pressed", "true");
            for (div of divs) {
                div.style.backgroundColor = defaultGrey;
                div.style.opacity = 1;
            }
        }) 
 }
+
 
 erase();

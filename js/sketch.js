@@ -170,37 +170,22 @@ function erase() {
     }) 
 }
 
-generateGrid();
+/*
+===============================
+START GAME
+===============================
+*/
 
+function startGame() {
+    generateGrid();
+    gridDensity();
+    styleButtons();
+    styleHeading();
+    styleLabels();
+    currentMode();
+    selectMode();
+    draw();
+    erase();
+}
 
-gridDensity();
-
-styleButtons();
-
-styleHeading();
-
-
-styleLabels();
-
-
-
-
-
-currentMode();
-
-
-
-selectMode();
-
-
-
-
-
-draw();
-
-
-
-
-
-
-erase();
+startGame();

@@ -1,6 +1,62 @@
+/*
+===============================
+CONSTANTS AND VARIABLES
+===============================
+*/
+
+// HTML collections
+const btns = document.querySelectorAll("button");
+const heading = document.querySelector("h1");
+const labels = document.getElementsByClassName("label");
+const modes = document.querySelectorAll(".mode button")
+const divs = document.getElementsByClassName("grid-square")
+const eraseBtn = document.querySelector("#erase")
+
+// Colors
+const psychedelicColors = ['#46FF31', '#31FFCD', '#3180FF', '#9231FF', '#FF31BB', '#FF5731', '#F6FF31']
+const modernColors = ['#1f1f1f', '#86b9ce', '#7772e2', '#4274fd', '#62c799', '#fba66c', '#fdd149']
+const defaultGrey = 'rgb(220, 220, 220)'
+let activeMode = 'Normal'
 
 
-//create the grid
+/*
+===============================
+STYLE FUNCTIONS
+===============================
+*/
+
+function styleButtons() {
+    for (btn of btns) {
+        if (btn.id == "erase") {
+            btn.className = "btn btn-danger"
+        } else if (btn.id == "medium-density" || btn.id == "normal") {
+        btn.className = "btn btn-light active";
+        btn.style.margin = "5px";
+        } else {
+            btn.className = "btn btn-light";
+            btn.style.margin = "5px";
+        }
+    }
+}
+
+function styleLabels() {
+    for (label of labels) {
+        label.classList.add("h5");
+    }
+}
+
+function styleHeading() {
+    heading.className = "display-2";
+    heading.style.color = '#d9ffbc'
+    heading.style.fontFamily = "cursive"
+}
+
+
+/*
+===============================
+UX FUNCTIONS
+===============================
+*/
 
 function generateGrid(size = 32 * 44, cssClass = "medium-default") {
     const gridContainer = document.getElementById("container");
@@ -16,12 +72,6 @@ function generateGrid(size = 32 * 44, cssClass = "medium-default") {
         gridContainer.appendChild(square);
     }
 }
-
-generateGrid();
-
-
-//size the grid
-//RECTOR BECAUSE: ONLY BUTTON ON AT ONCE, DON'T REPEAT YOURSELF
 
 function gridDensity() {
     document.getElementById("low-density").addEventListener("click", 
@@ -55,63 +105,6 @@ function gridDensity() {
     });
 }
 
-gridDensity();
-
-//button styling
-
-const btns = document.querySelectorAll("button");
-
-function styleButtons() {
-    for (btn of btns) {
-        if (btn.id == "erase") {
-            btn.className = "btn btn-danger"
-        } else if (btn.id == "medium-density" || btn.id == "normal") {
-        btn.className = "btn btn-light active";
-        btn.style.margin = "5px";
-        } else {
-            btn.className = "btn btn-light";
-            btn.style.margin = "5px";
-        }
-    }
-}
-
-styleButtons();
-
-//text styling
-
-const heading = document.querySelector("h1");
-heading.className = "display-2"; // might have to come back to later and make responsive
-heading.style.color = '#d9ffbc'
-heading.style.fontFamily = "cursive"
-
-
-const labels = document.getElementsByClassName("label");
-
-function styleLabels() {
-    for (label of labels) {
-        label.classList.add("h5");
-    }
-}
-
-styleLabels();
-
-// draw
-
-let activeMode = 'Normal'
-
-const modes = document.querySelectorAll(".mode button")
-
-
-function currentMode() {
-    for (mode of modes) {
-        mode.addEventListener("click", (e) => {
-            activeMode = e.target.textContent;
-       })
-   }
-}
-
-currentMode();
-
 function selectMode() {
     document.getElementById("normal").addEventListener("click", 
     function() {
@@ -138,14 +131,13 @@ function selectMode() {
     });
 }
 
-selectMode();
-
-
-const divs = document.getElementsByClassName("grid-square")
-const psychedelicColors = ['#46FF31', '#31FFCD', '#3180FF', '#9231FF', '#FF31BB', '#FF5731', '#F6FF31']
-const modernColors = ['#1f1f1f', '#86b9ce', '#7772e2', '#4274fd', '#62c799', '#fba66c', '#fdd149']
-
-
+function currentMode() {
+    for (mode of modes) {
+        mode.addEventListener("click", (e) => {
+            activeMode = e.target.textContent;
+       })
+   }
+}
 
 function draw() {
    
@@ -167,22 +159,48 @@ function draw() {
     }
 }
 
+function erase() {
+
+    eraseBtn.addEventListener("click", (e) => {
+        eraseBtn.setAttribute("aria-pressed", "true");
+        for (div of divs) {
+            div.style.backgroundColor = defaultGrey;
+            div.style.opacity = 1;
+        }
+    }) 
+}
+
+generateGrid();
+
+
+gridDensity();
+
+styleButtons();
+
+styleHeading();
+
+
+styleLabels();
+
+
+
+
+
+currentMode();
+
+
+
+selectMode();
+
+
+
+
 
 draw();
 
-const eraseBtn = document.querySelector("#erase")
-const defaultGrey = 'rgb(220, 220, 220)'
 
-function erase() {
 
-       eraseBtn.addEventListener("click", (e) => {
-           eraseBtn.setAttribute("aria-pressed", "true");
-           for (div of divs) {
-               div.style.backgroundColor = defaultGrey;
-               div.style.opacity = 1;
-           }
-       }) 
-}
+
 
 
 erase();

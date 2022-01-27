@@ -1,5 +1,5 @@
 /* GLOBAL VARS */
-const sections = Array.from(document.querySelectorAll(".main-two"))
+const sections = Array.from(document.querySelectorAll("section"))
 const myNav = document.querySelector("ul");
 
 
@@ -9,13 +9,19 @@ const myNav = document.querySelector("ul");
 /* HELPER FUNCTIONS */
 
 function createNavItem() {
+    console.log("We have sections: " + sections)
     for (section of sections) {
         sectionName = section.getAttribute("id")
         sectionLink = section.getAttribute("id")
 
         const listItem = document.createElement("li");
 
-        listItem.innerHTML = `<a class='nav-link' href='#${sectionLink}'>${sectionName}</a>`;
+        if (!sectionName) {
+            //pass
+        } else {
+            listItem.innerHTML = `<a class='nav-link' href='#${sectionLink}'>${sectionName}</a>`;
+        }    
+        console.log(listItem)
 
         myNav.appendChild(listItem)
     }

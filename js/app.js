@@ -27,24 +27,20 @@ function createNavItem() {
     }
 }
 
-const navItems = document.querySelector("ul li");
 
-function sectionInView(element) {
-    let sectionPos = element.getBoudingClientRect();
-    return (sectionPos.top >=0);
-}
+// mobile nav
+const toggleButton = document.getElementsByClassName('hamburger')[0]
+const navbarLinks = document.getElementsByClassName('nav-links')[0]
+const bar1 = document.getElementsByClassName('bar')[0]
+const bar2 = document.getElementsByClassName('bar')[1]
 
-function toggleActiveClass() {
-    for (section of sections) {
-        if (sectionInView(section)) {
-            if (!section.classList.contains('active')) {
-                section.classList.add('active');
-            }
-        } else {
-            section.classList.remove('active')
-        }
-    }
-}
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+  bar1.classList.add('bar1')
+  bar2.classList.add('bar2')
+  bar1.classList.toggle('close')
+  bar2.classList.toggle('close')
+})
 
 
 
@@ -52,4 +48,3 @@ function toggleActiveClass() {
 
 createNavItem();
 
-document.addEventListener("scroll", toggleActiveClass);

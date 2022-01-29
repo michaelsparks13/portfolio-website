@@ -248,6 +248,7 @@ section, footer {
   
 .about {
   flex-direction: row;
+  padding: 5%;
 }
 
 

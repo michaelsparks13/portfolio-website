@@ -20,8 +20,8 @@ function createNavItem() {
             //pass
         } else {
             listItem.innerHTML = `<a class='nav-link' href='#${sectionLink}'>${sectionName}</a>`;
+            
         }    
-        console.log(listItem)
 
         myNav.appendChild(listItem)
     }

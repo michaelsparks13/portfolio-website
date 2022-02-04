@@ -46,7 +46,7 @@ li a {
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
-  color: #eee7e1;
+  color: #fff;
 }
 
 .hamburger {
@@ -101,7 +101,7 @@ li a {
 }
 
 .bar.close {
-  background-color: #eee7e1;
+  background-color: #fff;
 }
 
 .bar1.close {
@@ -135,11 +135,11 @@ section, footer {
 
 section:nth-child(even) {
   background-color: #1a1919;
-  color: #eee7e1;
+  color: #fff;
 }
 
 section:nth-child(odd) {
-  background-color: #eee7e1;
+  background-color: #fff;
   color: #1a1919;
 }
 
@@ -152,7 +152,7 @@ section:nth-child(odd) {
 
 
 footer {
-  background-color: #eee7e1;
+  background-color: #fff;
   color: #1a1919;
 }
 
@@ -189,6 +189,13 @@ SECTIONS DISPLAY
   text-align: left;
 }
 
+.contact .section-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 /*
 
 ==========================
@@ -220,7 +227,7 @@ TYPOGRAPHY
 }
 
 .section-intro a {
-  color: #eee7e1;
+  color: #fff;
 }
 
 .proj-description {
@@ -230,7 +237,7 @@ TYPOGRAPHY
 }
 
 .proj-description a {
-  color: #eee7e1;
+  color: #fff;
 }
 
 .publication {
@@ -238,7 +245,6 @@ TYPOGRAPHY
 }
 
 .proj-card a {
-  color: #1a1919;
   padding-top: 3%;
   padding-bottom: 3%;
   width: 60%;
@@ -246,9 +252,28 @@ TYPOGRAPHY
   font-size: 1.3rem;
 }
 
+.journ a {
+    color: #1a1919;
+}
+
 .proj-card a p {
   margin-top: 5%;
 }
+
+
+
+#see-more {
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pub-info {
+  font-size: 0.8rem;
+}
+
 
 
 /*
@@ -267,11 +292,54 @@ IMAGES
 }
 
 .proj-img {
-  width: 80%;
+  width: 90%;
   height: 60%;
   border-radius: 5%;
 }
 
+
+
+ /*
+
+==========================
+BUTTONS
+==========================
+
+*/
+
+
+.btn {
+  margin: 5%;
+  padding: 15px;
+  border-radius: 5%;
+  text-decoration: none;
+}
+
+#see-more a {
+  background-color: rgb(254, 254, 254);
+  border: black 1px solid;
+  color: #1a1919;
+}
+
+#see-more a:hover {
+  background-color: darkgrey;
+}
+
+
+.contact a {
+  font-size: 2rem;
+  background-color: rgb(254, 254, 254);
+  color: #1a1919;
+}
+
+.contact a:hover {
+  background-color: darkgrey;
+}
+
+.email-btn {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /*  
 ==========================
@@ -301,7 +369,7 @@ NAV
 
   nav {
     background-color: #1a1919;
-    color: #eee7e1;
+    color: #fff;
   }
 
   .hamburger {
@@ -337,12 +405,15 @@ SECTIONS
     padding: 5%;
   }
 
-  .eng {
-    flex-direction: column;
-  }
 
   .section-intro {
     margin-bottom: 5%;
+  }
+
+  #see-more {
+    width: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 /*
 
@@ -412,18 +483,5 @@ TYPOGRAPHY
 
 */
 
-  #see-more {
-    font-size: 1.3em;
-    width: 40%;
-    text-align: left;
-    margin-top: 20%;
-    margin-left: 30%;
-    font-weight: bold;
-  }
-
-  #see-more a {
-    text-decoration: none;
-    color: #1a1919;
-  }
 
 }

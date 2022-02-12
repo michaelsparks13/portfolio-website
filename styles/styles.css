@@ -196,6 +196,7 @@ SECTIONS DISPLAY
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin-right: 0;
 }
 
 /*

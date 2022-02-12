@@ -185,7 +185,6 @@ SECTIONS DISPLAY
 
 }
 
-
 .info {
   width: 80%;
   text-align: left;
@@ -197,6 +196,24 @@ SECTIONS DISPLAY
   justify-content: center;
   align-items: flex-start;
   margin-right: 0;
+}
+
+.skills .section-intro {
+  margin-bottom: 1%;
+}
+.skills button {
+  padding: 2%;
+  margin: 3%;
+  border: 1px solid white;
+  border-radius: 15%;
+  transition: color 0.25s, background-color 0.25s, box-shadow 0.25s, transform 0.25s
+}
+
+.skills button:hover {
+  background-color: darkgrey;
+  transform: translateY(-0.5rem);
+  border-color: darkgrey;
+  box-shadow: 0 0.8rem 0.5rem -0.5rem darkgrey;
 }
 
 /*
@@ -263,8 +280,6 @@ TYPOGRAPHY
   margin-top: 5%;
 }
 
-
-
 #see-more {
   font-size: 1.2em;
   display: flex;
@@ -275,6 +290,10 @@ TYPOGRAPHY
 
 .pub-info {
   font-size: 0.9rem;
+}
+
+.skills .section-intro p {
+  font-size: 1rem;
 }
 
 
@@ -437,7 +456,26 @@ SECTIONS DISPLAY
 }
 
 
+.testing {
+  display: flex;
+  flex-direction: column;
+}
 
+.skills {
+  margin-bottom: 3%;
+}
+
+.skills .section-intro {
+  margin-bottom: 0;
+}
+
+#Engineering .section-intro h2 {
+  margin-top: -150%;
+}
+
+.skills button {
+  margin: 1% 2%;
+}
 
   /*
 

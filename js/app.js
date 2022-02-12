@@ -1,7 +1,7 @@
 /* GLOBAL VARS */
 const sections = Array.from(document.querySelectorAll("section"))
 const myNav = document.querySelector("ul");
-
+const skillsList = ["JavaScript", "HTML/CSS", "React", "GIS", "Mapbox", "Python", "Pandas", "Plotly"]
 
 
 
@@ -9,7 +9,6 @@ const myNav = document.querySelector("ul");
 /* HELPER FUNCTIONS */
 
 function createNavItem() {
-    console.log("We have sections: " + sections)
     for (section of sections) {
         sectionName = section.getAttribute("id")
         sectionLink = section.getAttribute("id")
@@ -26,6 +25,26 @@ function createNavItem() {
         myNav.appendChild(listItem)
     }
 }
+
+const skillsDiv = document.querySelector(".skills")
+
+const createSkillsList = (array, element) => {
+    // array.forEach(skill => {
+    //     const li = document.createElement("li")
+    //     li.textConent = skill
+    //     element.appendChild(li)
+    // })
+
+    for (i = 0; i < array.length; i++) {
+        let btn = document.createElement("button")
+        btn.innerText = array[i]
+        btn.setAttribute('type', 'button')
+        element.appendChild(btn)
+    }
+}
+
+//maybe useful for filtering list https://www.youtube.com/watch?v=kLFRFy2S6X8
+
 
 
 // mobile nav
@@ -47,4 +66,4 @@ toggleButton.addEventListener('click', () => {
 /* RUN FUNCTIONS */
 
 createNavItem();
-
+createSkillsList(skillsList, skillsDiv);

@@ -181,7 +181,7 @@ SECTIONS DISPLAY
 }
 
 .proj-card:hover {
-  transform: translateY(-1rem);
+  transform: translateY(-1.5rem);
 
 }
 
@@ -317,30 +317,24 @@ BUTTONS
   text-decoration: none;
 }
 
-#see-more a {
+.link-btn {
   background-color: rgb(254, 254, 254);
   border: black 1px solid;
   color: #1a1919;
+  transition: color 0.25s, background-color 0.25s, box-shadow 0.25s, transform 0.25s
 }
 
-#see-more a:hover {
+.link-btn:hover {
   background-color: darkgrey;
+  transform: translateY(-0.5rem);
+  border-color: darkgrey;
+  box-shadow: 0 0.8rem 0.5rem -0.5rem darkgrey;
 }
 
-
-.contact a {
-  font-size: 2rem;
-  background-color: rgb(254, 254, 254);
-  color: #1a1919;
-}
-
-.contact a:hover {
-  background-color: darkgrey;
-}
-
-.email-btn {
+#email-btn {
   margin-left: auto;
   margin-right: auto;
+  color: #1a1919
 }
 
 /*  

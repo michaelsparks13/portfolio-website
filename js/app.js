@@ -1,7 +1,7 @@
 /* GLOBAL VARS */
 const sections = Array.from(document.querySelectorAll("section"))
 const myNav = document.querySelector("ul");
-const skillsList = ["JavaScript", "HTML/CSS", "React", "GIS", "Mapbox", "Python", "Pandas", "Plotly"]
+const skillsList = ["JavaScript", "ES6", "HTML/CSS", "React", "GIS", "Mapbox", "Python", "Pandas", "Plotly"]
 
 
 
@@ -29,12 +29,7 @@ function createNavItem() {
 const skillsDiv = document.querySelector(".skills")
 
 const createSkillsList = (array, element) => {
-    // array.forEach(skill => {
-    //     const li = document.createElement("li")
-    //     li.textConent = skill
-    //     element.appendChild(li)
-    // })
-
+   
     for (i = 0; i < array.length; i++) {
         let btn = document.createElement("button")
         btn.innerText = array[i]

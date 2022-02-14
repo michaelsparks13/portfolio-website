@@ -1,7 +1,7 @@
 /* GLOBAL VARS */
 const sections = Array.from(document.querySelectorAll("section"))
 const myNav = document.querySelector("ul");
-const skillsList = ["JavaScript", "ES6", "HTML/CSS", "React", "GIS", "Mapbox", "Python", "Pandas", "Plotly"]
+const skillsList = ["JavaScript", "ES6", "HTML/CSS", "React", "GIS", "Mapbox", "Data Analysis", "SQL", "Python", "Pandas", "Plotly"]
 
 
 

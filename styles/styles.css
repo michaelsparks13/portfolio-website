@@ -205,15 +205,16 @@ SECTIONS DISPLAY
   padding: 1%;
   margin: 3%;
   border: 1px solid white;
-  border-radius: 15%;
+  border-radius: 2%;
   transition: color 0.25s, background-color 0.25s, box-shadow 0.25s, transform 0.25s
 }
 
 .skills button:hover {
-  background-color: darkgrey;
+  background-color: purple;
   transform: translateY(-0.5rem);
-  border-color: darkgrey;
-  box-shadow: 0 0.8rem 0.5rem -0.5rem darkgrey;
+  border-color: purple;
+  box-shadow: 0 0.8rem 0.5rem -0.5rem purple;
+  color: white;
 }
 
 /*
@@ -267,7 +268,7 @@ TYPOGRAPHY
 .proj-card a {
   padding-top: 3%;
   padding-bottom: 3%;
-  width: 85%;
+  width: 100%;
   text-decoration: none;
   font-size: 1.3rem;
 }
@@ -318,9 +319,8 @@ IMAGES
 }
 
 .proj-img {
-  width: 90%;
+  width: 100%;
   height: 60%;
-  border-radius: 5%;
 }
 
 
@@ -337,7 +337,7 @@ BUTTONS
 .btn {
   margin: 5%;
   padding: 15px;
-  border-radius: 5%;
+  border-radius: 2%;
   text-decoration: none;
 }
 
@@ -349,16 +349,21 @@ BUTTONS
 }
 
 .link-btn:hover {
-  background-color: darkgrey;
+  background-color: purple;
   transform: translateY(-0.5rem);
-  border-color: darkgrey;
-  box-shadow: 0 0.8rem 0.5rem -0.5rem darkgrey;
+  border-color: purple;
+  box-shadow: 0 0.8rem 0.5rem -0.5rem purple;
+  color: white;
 }
 
 #email-btn {
   margin-left: auto;
   margin-right: auto;
   color: #1a1919
+}
+
+#email-btn:hover {
+  color: white
 }
 
 /*  
@@ -455,6 +460,16 @@ SECTIONS DISPLAY
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.proj-card {
+  transition: color 0.25s, background-color 0.25s, box-shadow 0.25s, transform 0.25s
+}
+
+.proj-card:hover {
+  padding-bottom: 1%;
+  box-shadow: 0 0 15px purple;
+}
+
+
 .proj-description {
   width: 90%
 }
@@ -509,7 +524,6 @@ IMAGES
 
   .proj-img {
     height: 100%;
-    border-radius: 5%;
   }
 
 

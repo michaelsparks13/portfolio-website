@@ -41,6 +41,46 @@ const createSkillsList = (array, element) => {
 //maybe useful for filtering list https://www.youtube.com/watch?v=kLFRFy2S6X8
 
 
+/*
+
+SCROLLING ANIMATION
+
+*/
+
+var scroll = window.requestAnimationFrame ||
+            function(callback) {window.setTimeout(callback, 1000/60)};
+
+var elementsToShow = document.querySelectorAll('.show-on-scroll');
+
+function loop() {
+
+    elementsToShow.forEach( (element) => {
+
+        if (isElementInViewport(element)) {
+            element.classList.add('is-visible');
+        } 
+    });
+
+    scroll(loop);
+}
+
+// Helper function from: http://stackoverflow.com/a/7557433/274826
+function isElementInViewport(el) {
+  
+    var rect = el.getBoundingClientRect();
+    return (
+      (rect.top <= 0
+        && rect.bottom >= 0)
+      ||
+      (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+      ||
+      (rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+    );
+  }
+
+
 
 // mobile nav
 const toggleButton = document.getElementsByClassName('hamburger')[0]
@@ -62,3 +102,4 @@ toggleButton.addEventListener('click', () => {
 
 createNavItem();
 createSkillsList(skillsList, skillsDiv);
+loop();

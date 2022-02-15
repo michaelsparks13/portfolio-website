@@ -366,6 +366,18 @@ BUTTONS
   color: white
 }
 
+
+#github-link {
+  transition: color 0.25s, background-color 0.25s, box-shadow 0.25s, transform 0.25s
+}
+
+#github-link:hover {
+  background-color: purple;
+  transform: translateY(-0.5rem);
+  border-color: purple;
+  box-shadow: 0 0.8rem 0.5rem -0.5rem purple;
+}
+
 /*  
 ==========================
 ==========================

@@ -44,6 +44,11 @@ body {
   color: red;
 }
 
+.volcano-icon {
+  font-size: 2rem;
+  color: orange;
+}
+
 .loader {
   display: flex;
   flex-direction: column;
@@ -52,12 +57,9 @@ body {
   min-height: 100vh;
 }
 
-.loader img {
+ .loader img {
   width: 20%;
-}
-
-.loader h1 {
-  margin-top: -15%;
+  margin-bottom: -5%;
 }
 
 .eventBox {

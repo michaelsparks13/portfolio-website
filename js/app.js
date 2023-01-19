@@ -11,7 +11,7 @@ const skillsList = [
   "QGIS",
   "SQL",
   "Data Visualization",
-  "Geospatial Data Analysis",
+  "Geospatial Data Analysis"
 ];
 
 /* HELPER FUNCTIONS */

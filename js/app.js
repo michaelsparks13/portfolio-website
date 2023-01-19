@@ -2,17 +2,16 @@
 const sections = Array.from(document.querySelectorAll("section"));
 const myNav = document.querySelector("ul");
 const skillsList = [
-  "JavaScript",
-  "ES6",
-  "HTML/CSS",
+  "Web development",
   "GIS",
-  "Mapbox Studio",
-  "Mapbox GL JS",
-  "Data Analysis",
-  "SQL",
+  "HTML/CSS/JS",
   "Python",
-  "Pandas",
-  "Plotly",
+  "Mapbox",
+  "Leaflet",
+  "QGIS",
+  "SQL",
+  "Data Visualization",
+  "Geospatial Data Analysis",
 ];
 
 /* HELPER FUNCTIONS */

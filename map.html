@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Cape Town, South Africa</title>
+    <title>Data Journalist, Cartographer, Web Designer</title>
     <meta
       name="viewport"
       content="initial-scale=1,maximum-scale=1,user-scalable=no"
@@ -26,130 +26,12 @@
       href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:700i|Fira+Sans"
       rel="stylesheet"
     />
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background: #f5f5f5;
-        font-family: "Fira Sans", Sans-Serif;
-        font-weight: 300;
-        color: #3d3d3d;
-        font-size: 100%;
-      }
-
-      header,
-      section,
-      footer {
-        width: 80%;
-        margin: 10px auto;
-      }
-
-      h1 {
-        font-size: 2em;
-        font-weight: 900;
-        letter-spacing: 0.04em;
-      }
-
-      h2 {
-        font-size: 1.5em;
-        font-weight: 300;
-        letter-spacing: 0.04em;
-        font-family: "Cormorant Garamond", Serif;
-      }
-
-      p {
-        font-size: 1.1em;
-        line-height: 1.5em;
-      }
-
-      a {
-        color: #ff8a4a;
-        font-weight: bold;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      ul {
-        padding-left: 20px;
-      }
-
-      li {
-        margin: 10px 0;
-      }
-      hr {
-        margin: 20px 0;
-        border: 0;
-        height: 1px;
-        background: #d3d3d3;
-      }
-
-      #map {
-        width: 100%;
-        height: 540px;
-        margin: 10px auto;
-        border: 2px solid #d3d3d3;
-      }
-
-      .highlight {
-        color: #f05716;
-        font-weight: bold;
-      }
-
-      #slideshow-containers {
-        position: relative;
-        margin: auto;
-      }
-
-      .container {
-        display: none;
-      }
-
-      .img-fill {
-        width: 100%;
-        height: auto;
-        margin: 10px 0;
-      }
-
-      .caption {
-        margin: 0 0 20px 0;
-        display: block;
-        font-family: "Cormorant Garamond", Serif;
-      }
-
-      /* Use float property to make two-column layout */
-      .first-column {
-        float: left;
-        width: 49%;
-        padding-right: 2%;
-      }
-
-      .second-column {
-        float: left;
-        width: 49%;
-      }
-
-      /* Clear floats after columns */
-      .row::after {
-        content: "";
-        display: block;
-        clear: both;
-      }
-
-      @media screen and (max-width: 900px) {
-        .first-column,
-        .second-column {
-          width: 100%;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles/map.css" />
   </head>
 
   <body>
     <header>
-      <h1>Cape Town, South Africa</h1>
+      <h1>Michael Sparks</h1>
     </header>
 
     <section>
@@ -157,111 +39,10 @@
 
       <div class="row">
         <div class="first-column">
-          <h2>The Mother City</h2>
-
-          <p>
-            Known as The Mother City, Cape Town is South Africa's legislative
-            capital, i.e. it is home to the country's legislature. (The
-            executive offices and judicial offices are located in other cities
-            throughout the country.)
-          </p>
-          <p>
-            Originally established as a trading outpost for the Dutch East India
-            company, Cape Town is now one of the most culturally vibrant cities
-            in South Africa and, indeed, the entire continent.
-          </p>
-          <p>Here's a few things the city is known for:</p>
-          <ul>
-            <li>
-              Incredible natural beauty, including
-              <a href="https://tablemountainnationalpark.org/" target="_"
-                >Table Mountain National Park</a
-              >
-            </li>
-            <li>
-              A world renowned
-              <a
-                href="https://theculturetrip.com/africa/south-africa/articles/wine-lovers-guide-cape-town/"
-                target="_"
-                >wine scene</a
-              >
-            </li>
-            <li>
-              Food with an unrivaled
-              <a
-                href="https://worldoffoodanddrink.worldtravelguide.net/cape-town-food-drink-guide-10-things-try-cape-town-south-africa/"
-                target="_"
-                >international flair</a
-              >
-            </li>
-
-            <li>
-              The Bo-Kapp Neighborhood and its
-              <a
-                href="https://www.capetown.travel/getting-to-know-the-bo-kaap/"
-                target="_"
-                >colorful houses</a
-              >
-            </li>
-          </ul>
+          <h2>About me</h2>
         </div>
         <div class="second-column">
-          <div id="slideshow-containers">
-            <div class="container">
-              <img
-                src="images/table_mtn_view.jpeg"
-                alt="table-mtn-view"
-                class="img-fill"
-                id="photo"
-              />
-              <div class="caption">
-                The view from Table Mountain;
-                <a
-                  href="https://en.wikipedia.org/wiki/Table_Mountain#/media/File:Cape_Town_Pano1.jpg"
-                  target="_"
-                  >public use via Wikimedia Commons</a
-                >. (Click image for slide show)
-              </div>
-            </div>
-
-            <div class="container">
-              <img
-                src="images/delaire_graff.webp"
-                alt="winery"
-                class="img-fill"
-                id="photo"
-              />
-              <div class="caption">
-                The Delaire Graff Estate; photo courtesy Delaire Graff Estate
-              </div>
-            </div>
-
-            <div class="container">
-              <img
-                src="images/gatsby.webp"
-                alt="sandwhic"
-                class="img-fill"
-                id="photo"
-              />
-              <div class="caption">
-                The Gatsby is a popular sandwhich type in Cape Town; image via
-                Cape Town Travel
-              </div>
-            </div>
-
-            <div class="container">
-              <img
-                src="images/bo-kaap.jpeg"
-                alt="colorful houses"
-                class="img-fill"
-                id="photo"
-              />
-              <div class="caption">
-                A colorful street in Bo Kaap; image via Cape Town Travel
-              </div>
-            </div>
-          </div>
-        </div>
+          
       </div>
     </section>
 
@@ -283,73 +64,6 @@
     </footer>
     <script src="http://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script>
-      // center map on cape town
-      let options = {
-        center: [-33.9249, 18.4241],
-        zoom: 10,
-      };
-
-      let map = L.map("map", options);
-
-      //   create map details
-      let basemap_url =
-        "https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png";
-
-      let basemap_attributes = {
-        attribution:
-          '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="http://cartodb.com/attributions">CartoDB</a>',
-        subdomains: "abcd",
-        maxZoom: 19,
-      };
-
-      let tiles = L.tileLayer(basemap_url, basemap_attributes).addTo(map);
-
-      let message = "Cape Town, Western Cape, SA";
-
-      //create city variables
-      const city1Name = "Stellenbosch",
-        city1Coords = [-33.95178920453101, 18.868071512830355];
-
-      const city2Name = "Paarl",
-        city2Coords = [-33.69504553824993, 18.9583552929542];
-
-      const city3Name = "Robben Island",
-        city3Coords = [-33.80764606792686, 18.37151072214921];
-
-      const city4Name = "Cape Town",
-        city4Coords = [-33.885513604234575, 18.454849596109685];
-
-      //store in an array
-      const cities = [city1Name, city2Name, city3Name, city4Name],
-        coords = [city1Coords, city2Coords, city3Coords, city4Coords];
-
-        for (let i = 0; i < cities.length; i++) {
-        
-        // create the Leaflet marker using the coordinates
-        L.marker(coords[i])
-        .bindTooltip(cities[i])
-        .addTo(map);
-      }
-      // add marker to map
-      
-
-      //   create image slideshow
-      let container = document.getElementById("slideshow-containers");
-      let slides = document.getElementsByClassName("container");
-      let slideIndex = 0;
-      let visibleSlide = slides[slideIndex];
-      visibleSlide.style.display = "block";
-
-      container.addEventListener("click", function () {
-        visibleSlide.style.display = "none";
-        slideIndex++;
-        if (slideIndex > slides.length - 1) {
-          slideIndex = 0;
-        }
-        visibleSlide = slides[slideIndex];
-        visibleSlide.style.display = "block";
-      });
-    </script>
+    <script src="js/map.js"></script>
   </body>
 </html>

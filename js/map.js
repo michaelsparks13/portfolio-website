@@ -32,3 +32,12 @@
     .addTo(map);
 
   // add marker to map
+  var sidebar = L.control.sidebar('sidebar', {
+    position: 'left'
+});
+
+map.on('click', function () {
+    sidebar.toggle();
+})
+
+map.addControl(sidebar);

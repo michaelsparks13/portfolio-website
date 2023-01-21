@@ -1,5 +1,4 @@
-import {projects} from './projects.js'
-
+import { projects } from "./projects.js";
 
 // center map on cape town
 let options = {
@@ -24,40 +23,39 @@ let basemap_attributes = {
 
 let tiles = L.tileLayer(basemap_url, basemap_attributes).addTo(map);
 
-
 // add marker to map
 var sidebar = L.control.sidebar("sidebar", {
   position: "left",
 });
 
-
 function createMarkers(projects) {
-    for (let project in projects) {
-       let mkr = L.marker(projects[project].cityCoords).bindPopup(projects[project].cityName).addTo(map);
-    }
+  for (let project in projects) {
+      L.marker(projects[project].coords)
+      .bindPopup(projects[project].name)
+      .addTo(map);
+  }
 }
 
 
 
-// for (k in maps) {
-// //   mkr = L.marker(maps[k].cityCoords).bindPopup(maps[k].cityName).addTo(map);
-
-//   mkr.on("click", function () {
+//     map.on("click", function () {
 //     let sb = document.getElementById("sidebar");
-
-//     let content = `
+//     let content = "";
+//     content = `
 //    <article class="sidebar-content">
-//    <h1>${maps[k].cityName}</h1>
+//    <h1>${projects[project].name}</h1>
 //    <div class="info-content">
-//      <div class="info-description">${maps[k].cityInfo}</div>
-//      <div><a href="${maps[k].cityLink}" target="_" alt="$maps[k].cityName} map">Map</a></div>
+//      <div class="info-description">${projects[project].info}</div>
+//      <div><a href="${projects[project].link}" target="_" alt="$maps[k].cityName} map">Map</a></div>
 //    </div>
 //  </article>`;
 
 //     sb.innerHTML += content;
 //     sidebar.toggle();
 //   });
-// }
 
 createMarkers(projects);
+// const mkrs = document.getElementsByClassName['leaflet-marker-pane'];
+// console.log(mkrs)
 map.addControl(sidebar);
+

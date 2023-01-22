@@ -24,19 +24,39 @@ let basemap_attributes = {
 let tiles = L.tileLayer(basemap_url, basemap_attributes).addTo(map);
 
 // add marker to map
-var sidebar = L.control.sidebar("sidebar", {
+let sidebar = L.control.sidebar("sidebar", {
   position: "left",
 });
 
+let markersLayer = L.featureGroup().addTo(map)
+
 function createMarkers(projects) {
   for (let project in projects) {
-      L.marker(projects[project].coords)
+      let mkr = L.marker(projects[project].coords)
       .bindPopup(projects[project].name)
-      .addTo(map);
+      .addTo(map)
+      
+      markersLayer.addLayer(mkr)
   }
 }
 
+console.log(markersLayer)
 
+
+markersLayer.on("click", markerOnClick);
+
+function markerOnClick(e) {
+    console.log('marker clicked');
+    sidebar.toggle()
+  }
+// const mkrs = document.getElementsByClassName['leaflet-marker-pane'];
+
+// for (let mkr in mkrs) {
+//     mkr.addEventListener("click", function() {
+//         sidebar.toggle();
+//         console.log('clicked')
+//     });
+// };
 
 //     map.on("click", function () {
 //     let sb = document.getElementById("sidebar");
@@ -55,7 +75,5 @@ function createMarkers(projects) {
 //   });
 
 createMarkers(projects);
-// const mkrs = document.getElementsByClassName['leaflet-marker-pane'];
-// console.log(mkrs)
 map.addControl(sidebar);
 

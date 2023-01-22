@@ -6,7 +6,7 @@ const projects = {
       link: "https://michael-sparks13.github.io/cape-town/",
     },
   
-    Flavortown: {
+    "Flavortown": {
       name: "Flavortown",
       coords: [35.896261041961644, -96.21469091320857],
       info: "a nice place",

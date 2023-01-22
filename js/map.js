@@ -33,32 +33,44 @@ let markersLayer = L.featureGroup().addTo(map);
 function createMarkers(projects) {
   for (let project in projects) {
     let mkr = L.marker(projects[project].coords, { title: project })
-      .bindPopup(projects[project].name)
       .addTo(map);
 
     markersLayer.addLayer(mkr);
   }
 }
 
-markersLayer.on("click", markerOnClick);
+function boundMap(coords) {
+    map.fitBounds(coords)
+}
 
 function markerOnClick(e) {
-  let sb = document.getElementById("sidebar");
-  let project = e.layer.options.title;
-  let content = "";
-  sb.innerHTML = content;
-  content = `
-   <article class="sidebar-content">
-   <h1>${projects[project].name}</h1>
-   <div class="info-content">
-     <div class="info-description">${projects[project].info}</div>
-     <div><a href="${projects[project].link}" target="_" alt="$maps[k].cityName} map">Map</a></div>
-   </div>
- </article>`;
+  
+    let sb = document.getElementById("sidebar");
+    let project = e.layer.options.title;
+    sb.innerHTML = "";
+    
+    let content = `
+    <article class="sidebar-content">
+    <h1>${projects[project].name}</h1>
+    <div class="info-content">
+        <div class="info-description">${projects[project].info}</div>
+        <div><a href="${projects[project].link}" target="_" alt="$maps[k].cityName} map">Map</a></div>
+    </div>
+    </article>`;
 
-  sb.innerHTML += content;
-  sidebar.toggle();
+    sb.innerHTML += content;
+    sidebar.toggle();
+
+    map.fitBounds([e.latlng], {
+        maxZoom:10,
+        paddingTopLeft: [200,50]
+        }
+    );
 }
+
+// when closing sidebar, back to zoom 2
+
 
 createMarkers(projects);
 map.addControl(sidebar);
+markersLayer.on("click", markerOnClick);

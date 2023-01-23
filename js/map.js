@@ -2,7 +2,7 @@ import { projects } from "./projects.js";
 
 // center map on cape town
 let options = {
-  center: [38.53784243091848, -100.76566617010869],
+  center: [30.654162719283736, 3.679454918417687],
   zoom: 2,
 };
 
@@ -10,11 +10,11 @@ let map = L.map("map", options);
 
 //   create map details
 let basemap_url =
-  "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}";
+  "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png";
 
 let basemap_attributes = {
   attribution:
-    'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
   subdomains: "abcd",
   minZoom: 0,
   maxZoom: 20,
@@ -33,8 +33,8 @@ let markersLayer = L.featureGroup().addTo(map);
 function createMarkers(projects) {
   for (let project in projects) {
     let mkr = L.marker(projects[project].coords, { title: project })
-      .addTo(map);
-
+      .addTo(map)
+      
     markersLayer.addLayer(mkr);
   }
 }
@@ -74,11 +74,9 @@ function markerOnClick(e) {
     );
 
     close = document.getElementsByClassName("close")
-    console.log(close)
 
     close[0].addEventListener("click", function() {
         map.setView([38.53784243091848, -100.76566617010869], 2);
-        console.log('close clicked')
     })
 }
 

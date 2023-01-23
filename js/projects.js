@@ -1,5 +1,5 @@
 const projects = {
-  "Cape Town": {
+  CapeTown: {
     name: "Cape Town",
     coords: [-33.885513604234575, 18.454849596109685],
     info: "A relatively simple map highlighting some of Cape Town's main attractions. Also uses map markers to indicate a few neighboring towns.",
@@ -65,7 +65,7 @@ const projects = {
 
   GDP: {
     name: "GDP per Capita and Internet Connectivity",
-    coords: [50.67916052184304, 9.046127008552729],
+    coords: [7.188086166883424, -76.03973083459546],
     info: "Mapping how GDP per capita and internet connectivity are correlated around the world",
     tools: "Built with QGIS",
     link: "../images/projects/gdp.png",
@@ -115,6 +115,123 @@ const projects = {
     tools: "Made with Leaflet; Markers drawn with D3",
     link: "https://michael-sparks13.github.io/newengland-hydropower/",
     img: "../images/projects/hydropower.jpeg"
+  },
+
+  PaFires: {
+    name: "Pennsylvania Wildfires",
+    coords: [41.89234418126014, -76.6849071886933],
+    info: "More wildfires in PA than you might think",
+    tools: "Layers styled and calculations done with QGIS",
+    link: "../images/projects/pa_fires.png",
+    img: "../images/projects/pa_fires.png"
+  },
+
+  Volunteers: {
+    name: "The National Park's Secret Weapon? Volunteers.",
+    coords: [32.28315467563012, -111.16455109035692],
+    info: "An investigation into how the Park Service relies so heavily on volunteer labor",
+    tools: "Originally published on CrowdedParks.org",
+    link: "https://www.crowdedparks.org/articles/volunteers-article.html",
+    img: "../images/projects/volunteers.jpeg"
+  },
+
+  CrowdingPt1: {
+    name: "Crowding Part 1",
+    coords: [47.17045577788941, -102.39525283320644],
+    info: "Using data to investigate how crowded national parks really are",
+    tools: "Originally published on CrowdedParks.org",
+    link: "https://www.crowdedparks.org/articles/crowding-part-one.html",
+    img: "../images/projects/crowded-pt1.jpeg"
+  },
+
+  CrowdingPt2: {
+    name: "Crowding Part 2",
+    coords: [44.44165207168299, -110.84092665146639],
+    info: "Using data to investigate how crowded national parks really are",
+    tools: "Originally published on CrowdedParks.org",
+    link: "https://www.crowdedparks.org/articles/crowding-part-two.html",
+    img: "../images/projects/crowded-pt2.jpeg"
+  },
+
+  Delmarva: {
+    name: "Climate Change is Coming for Delmarva",
+    coords: [38.425824651494594, -76.10104993831315],
+    info: "Traveled to the Delmarva Peninsula to look at how climate change is changing this historic area",
+    tools: "Originally published on CrowdedParks.org",
+    link: "https://www.crowdedparks.org/articles/delmarva.html",
+    img: "../images/projects/delmarva.jpeg"
+  },
+
+  Assateague: {
+    name: "The national park where preservation isn't the goal",
+    coords: [38.04527891738589, -75.24531372596016],
+    info: "Traveled to the Assateague Island to see their unique approach to handling climate change",
+    tools: "Originally published on CrowdedParks.org",
+    link: "https://www.crowdedparks.org/articles/assateague-island.html",
+    img: "../images/projects/assateague.jpeg"
+  },
+
+  FireIsland: {
+    name: "A breach in Fire Island",
+    coords: [40.700275262920506, -72.95833157451744],
+    info: "Fire Island",
+    tools: "Originally published on NationalParksTraveler.org",
+    link: "https://www.crowdedparks.org/articles/fire-island.html",
+    img: "../images/projects/fire-island.jpeg"
+  },
+
+  Expansion: {
+    name: "Eastern Expansion",
+    coords: [35.611474138485065, -83.68414686633372],
+    info: "expanding parks",
+    tools: "Originally published on NationalParksTraveler.org",
+    link: "https://www.crowdedparks.org/articles/eastern-expansion.html",
+    img: "../images/projects/eastern-expansion.jpeg"
+  },
+
+  Expansion: {
+    name: "Eastern Expansion",
+    coords: [35.611474138485065, -83.68414686633372],
+    info: "expanding parks",
+    tools: "Originally published on NationalParksTraveler.org",
+    link: "https://www.crowdedparks.org/articles/eastern-expansion.html",
+    img: "../images/projects/eastern-expansion.jpeg"
+  },
+
+  Hatteras: {
+    name: "house falling cape hatteras",
+    coords: [35.397478946946556, -75.48899745843084],
+    info: "a house fell down",
+    tools: "Originally published on NationalParksTraveler.org",
+    link: "https://www.crowdedparks.org/articles/sea-level-rise.html",
+    img: "../images/projects/cape-hatteras.jpeg"
+  },
+
+  CrowdedParks: {
+    name: "CrowdedParks",
+    coords: [25.314629174232937, -80.93108396464223],
+    info: "i kick ass",
+    tools: "I built it; self taught",
+    link: "https://www.crowdedparks.org",
+    img: "../images/projects/cape-hatteras.jpeg"
+  },
+
+  Arches: {
+    name: "Natural Arches across the US",
+    coords: [31.10480812658743, -85.88757975203619],
+    info: "i kick ass",
+    tools: "I built it; self taught",
+    link: "https://michael-sparks13.github.io/arches/",
+    img: "../images/projects/arches.jpeg"
+  },
+
+  Aus: {
+    name: "cities in australia",
+    coords: [-31.89917642592571, 116.11606502685913],
+    info: "i kick ass",
+    tools: "I built it; self taught",
+    link: "https://michael-sparks13.github.io/australia/",
+    img: "../images/projects/aus.jpeg"
   },
 
 //   end of projects object

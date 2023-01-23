@@ -3,6 +3,7 @@ const projects = {
       name: "Cape Town",
       coords: [-33.885513604234575, 18.454849596109685],
       info: "a nice place",
+      tools: "leaflet",
       link: "https://michael-sparks13.github.io/cape-town/",
     },
   

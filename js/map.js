@@ -55,9 +55,10 @@ function markerOnClick(e) {
     <article class="sidebar-content">
     <h1>${projects[project].name}</h1>
     <div class="info-content">
+        <div><img src="${projects[project].img}" alt="project image">
         <div class="info-description">${projects[project].info}</div>
-        <div class="tools">Made using: ${projects[project].tools}</div>
-        <div><a href="${projects[project].link}" target="_" alt="$maps[k].cityName} map">Map</a></div>
+        <div class="tools">${projects[project].tools}</div>
+        <div><a href="${projects[project].link}" target="_" alt="$maps[k].cityName} map">See it here</a></div>
     </div>
     </article>`;
 

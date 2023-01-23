@@ -80,11 +80,6 @@ function markerOnClick(e) {
     })
 }
 
-
-
-
-
-
 createMarkers(projects);
 map.addControl(sidebar);
 markersLayer.on("click", markerOnClick);

@@ -43,6 +43,8 @@ function boundMap(coords) {
     map.fitBounds(coords)
 }
 
+let close;
+
 function markerOnClick(e) {
   
     let sb = document.getElementById("sidebar");
@@ -61,14 +63,26 @@ function markerOnClick(e) {
     sb.innerHTML += content;
     sidebar.toggle();
 
+
+    //can i refactor this into a standalone function?
     map.fitBounds([e.latlng], {
         maxZoom:10,
-        paddingTopLeft: [200,50]
+        paddingTopLeft: [200, 50]
         }
     );
+
+    close = document.getElementsByClassName("close")
+    console.log(close)
+
+    close[0].addEventListener("click", function() {
+        map.setView([38.53784243091848, -100.76566617010869], 2);
+        console.log('close clicked')
+    })
 }
 
-// when closing sidebar, back to zoom 2
+
+
+
 
 
 createMarkers(projects);

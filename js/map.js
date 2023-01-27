@@ -32,26 +32,24 @@ let markersLayer = L.featureGroup().addTo(map);
 
 function createMarkers(projects) {
   for (let project in projects) {
-    let mkr = L.marker(projects[project].coords, { title: project })
-      .addTo(map)
-      
+    let mkr = L.marker(projects[project].coords, { title: project }).addTo(map);
+
     markersLayer.addLayer(mkr);
   }
 }
 
 function boundMap(coords) {
-    map.fitBounds(coords)
+  map.fitBounds(coords);
 }
 
 let close;
 
 function markerOnClick(e) {
-  
-    let sb = document.getElementById("sidebar");
-    let project = e.layer.options.title;
-    sb.innerHTML = "";
-    
-    let content = `
+  let sb = document.getElementById("sidebar");
+  let project = e.layer.options.title;
+  sb.innerHTML = "";
+
+  let content = `
     <article class="sidebar-content">
     <h1>${projects[project].name}</h1>
     <div class="info-content">
@@ -62,24 +60,35 @@ function markerOnClick(e) {
     </div>
     </article>`;
 
-    sb.innerHTML += content;
-    sidebar.toggle();
+  sb.innerHTML += content;
+  sidebar.toggle();
 
+  //can i refactor this into a standalone function?
+  map.fitBounds([e.latlng], {
+    maxZoom: 10,
+    paddingTopLeft: [200, 50],
+  });
 
-    //can i refactor this into a standalone function?
-    map.fitBounds([e.latlng], {
-        maxZoom:10,
-        paddingTopLeft: [200, 50]
-        }
-    );
+  close = document.getElementsByClassName("close");
 
-    close = document.getElementsByClassName("close")
+  close[0].addEventListener("click", function () {
+    map.setView([38.53784243091848, -100.76566617010869], 2);
+  });
+}
 
-    close[0].addEventListener("click", function() {
-        map.setView([38.53784243091848, -100.76566617010869], 2);
-    })
+function testfunc(e) {
+  let project = e.layer.options.title;
+
+  L.popup({
+    offset: [0, -25],
+    className: 'popup'
+  })
+    .setLatLng(projects[project].coords)
+    .setContent(`${projects[project].name}`)
+    .openOn(map);
 }
 
 createMarkers(projects);
 map.addControl(sidebar);
 markersLayer.on("click", markerOnClick);
+markersLayer.on("mouseover", testfunc);

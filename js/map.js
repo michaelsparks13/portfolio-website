@@ -1,8 +1,10 @@
 import { projects } from "./projects.js";
 
+const center = [30.654162719283736, 3.679454918417687]
+
 // center map on cape town
 let options = {
-  center: [30.654162719283736, 3.679454918417687],
+  center: center,
   zoom: 2,
 };
 
@@ -65,14 +67,14 @@ function markerOnClick(e) {
 
   //can i refactor this into a standalone function?
   map.fitBounds([e.latlng], {
-    maxZoom: 10,
+    maxZoom: 9,
     paddingTopLeft: [200, 50],
   });
 
   close = document.getElementsByClassName("close");
 
   close[0].addEventListener("click", function () {
-    map.setView([38.53784243091848, -100.76566617010869], 2);
+    map.setView(center, 2);
   });
 }
 

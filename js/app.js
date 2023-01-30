@@ -1,7 +1,8 @@
+import { projects } from "./projects.js";
+
 /* GLOBAL VARS */
 const sections = Array.from(document.querySelectorAll("section"));
 const myNav = document.querySelector("ul");
-
 
 /* HELPER FUNCTIONS */
 
@@ -23,6 +24,22 @@ function createNavItem() {
 }
 
 
+function createList(projects) {
+  for (let project in projects) {
+    let projBox = document.createElement("div");
+    // const projImg = document.createElement("img");
+    // const projInfo = document.createElement("div");
+    document.querySelector('.proj-cards').appendChild(projBox)
+
+    let content = `<h1>${projects[project].name}</h1>
+                   <p>${projects[project].info}<p>
+                   <p>${projects[project].tools}<p>
+                   <a href=${projects[project].link}>See it here</a>`
+
+    projBox.innerHTML = content;
+
+  }
+};
 
 /*
 
@@ -79,5 +96,6 @@ toggleButton.addEventListener("click", () => {
 
 /* RUN FUNCTIONS */
 
-createNavItem();
+//createNavItem();
 loop();
+createList(projects);

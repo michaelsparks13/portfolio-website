@@ -1,18 +1,7 @@
 /* GLOBAL VARS */
 const sections = Array.from(document.querySelectorAll("section"));
 const myNav = document.querySelector("ul");
-const skillsList = [
-  "Web development",
-  "GIS",
-  "HTML/CSS/JS",
-  "Python",
-  "Mapbox",
-  "Leaflet",
-  "QGIS",
-  "SQL",
-  "Data Visualization",
-  "Geospatial Data Analysis"
-];
+
 
 /* HELPER FUNCTIONS */
 
@@ -33,18 +22,7 @@ function createNavItem() {
   }
 }
 
-const skillsDiv = document.querySelector(".skills");
 
-const createSkillsList = (array, element) => {
-  for (i = 0; i < array.length; i++) {
-    let btn = document.createElement("button");
-    btn.innerText = array[i];
-    btn.setAttribute("type", "button");
-    element.appendChild(btn);
-  }
-};
-
-//maybe useful for filtering list https://www.youtube.com/watch?v=kLFRFy2S6X8
 
 /*
 
@@ -102,5 +80,4 @@ toggleButton.addEventListener("click", () => {
 /* RUN FUNCTIONS */
 
 createNavItem();
-createSkillsList(skillsList, skillsDiv);
 loop();

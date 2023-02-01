@@ -133,10 +133,10 @@ TYPOGRAPHY
 .proj-card a {
   width: 100%;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
-.proj-card a p {
+.proj-card a, p {
   margin-top: 5%;
 }
 

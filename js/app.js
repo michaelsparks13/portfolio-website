@@ -2,39 +2,26 @@ import { projects } from "./projects.js";
 
 /* GLOBAL VARS */
 const sections = Array.from(document.querySelectorAll("section"));
-const myNav = document.querySelector("ul");
 
 /* HELPER FUNCTIONS */
 
-function createNavItem() {
-  for (section of sections) {
-    sectionName = section.getAttribute("id");
-    sectionLink = section.getAttribute("id");
-
-    const listItem = document.createElement("li");
-
-    if (!sectionName) {
-      //pass
-    } else {
-      listItem.innerHTML = `<a class='nav-link' href='#${sectionLink}'>${sectionName}</a>`;
-    }
-
-    myNav.appendChild(listItem);
-  }
-}
 
 
 function createList(projects) {
   for (let project in projects) {
-    let projBox = document.createElement("div");
+    let projBox = document.createElement("div")
+        projBox.setAttribute('class', 'proj-card show-on-scroll')
+    
     // const projImg = document.createElement("img");
     // const projInfo = document.createElement("div");
     document.querySelector('.proj-cards').appendChild(projBox)
 
-    let content = `<h1>${projects[project].name}</h1>
-                   <p>${projects[project].info}<p>
+    let content = `<a href=${projects[project].link} target="_">
+                   <img class="proj-img" src="${projects[project].img}">
+                   <h1>${projects[project].name}</h1>
+                   <p class="proj-description">${projects[project].info}<p>
                    <p>${projects[project].tools}<p>
-                   <a href=${projects[project].link}>See it here</a>`
+                   <a href=${projects[project].link} target="_">See it here</a></a>`
 
     projBox.innerHTML = content;
 
@@ -79,20 +66,6 @@ function isElementInViewport(el) {
         (window.innerHeight || document.documentElement.clientHeight))
   );
 }
-
-// mobile nav
-const toggleButton = document.getElementsByClassName("hamburger")[0];
-const navbarLinks = document.getElementsByClassName("nav-links")[0];
-const bar1 = document.getElementsByClassName("bar")[0];
-const bar2 = document.getElementsByClassName("bar")[1];
-
-toggleButton.addEventListener("click", () => {
-  navbarLinks.classList.toggle("active");
-  bar1.classList.add("bar1");
-  bar2.classList.add("bar2");
-  bar1.classList.toggle("close");
-  bar2.classList.toggle("close");
-});
 
 /* RUN FUNCTIONS */
 

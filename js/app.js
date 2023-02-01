@@ -1,11 +1,7 @@
 import { projects } from "./projects.js";
 
-/* GLOBAL VARS */
-const sections = Array.from(document.querySelectorAll("section"));
 
 /* HELPER FUNCTIONS */
-
-
 
 function createList(projects) {
   for (let project in projects) {
@@ -68,7 +64,5 @@ function isElementInViewport(el) {
 }
 
 /* RUN FUNCTIONS */
-
-//createNavItem();
 loop();
 createList(projects);

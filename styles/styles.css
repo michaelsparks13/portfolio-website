@@ -6,24 +6,18 @@ UNIVERSALS
 
 */
 
-
-*, ::before,
+*,
+::before,
 ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Proxima Nova", "Georgia" , Arial, sans-serif;
+  font-family: "Proxima Nova", "Georgia", Arial, sans-serif;
 }
-
 
 html {
   scroll-behavior: smooth;
 }
-
-.proj-card h1, p {
-  color: black;
-}
-
 
 /*  
 ==========================
@@ -38,7 +32,6 @@ html {
 
 */
 
-
 /*
 
 ==========================
@@ -51,28 +44,14 @@ SECTIONS SETUP
   display: grid;
 }
 
-section, footer {
+section,
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5%;
+  padding: 1% 5%;
 }
-
-.about {
-  padding: 10% 5% 5% 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-footer {
-  background-color: #fff;
-  color: #1a1919;
-}
-
-
 
 /*
 
@@ -94,7 +73,7 @@ SECTIONS DISPLAY
   display: flex;
   flex-direction: column;
   opacity: 1;
-  transition: opacity 0.6s .4s ease-out;
+  transition: opacity 0.4s 0.3s ease-out;
   will-change: transform, opacity;
   background-color: rgb(245, 245, 245);
   padding: 5px;
@@ -112,15 +91,12 @@ SECTIONS DISPLAY
 
 .proj-card:hover {
   transform: translateY(-1.5rem);
-
 }
 
 .info {
   width: 80%;
   text-align: left;
 }
-
-
 
 /*
 
@@ -129,17 +105,26 @@ TYPOGRAPHY
 ==========================
 */
 
-
 .proj-card a {
   width: 100%;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
-.proj-card a, p {
+.proj-card a,
+.proj-card p {
   margin-top: 5%;
 }
 
+.proj-card h1,
+p {
+  color: black;
+}
+
+#title {
+  padding-left: 6%;
+  padding-top: 3%;
+}
 
 /*
 
@@ -149,15 +134,12 @@ IMAGES
 
 */
 
-
 .proj-img {
   width: 100%;
   height: 60%;
 }
 
-
-
- /*
+/*
 
 
 /*  
@@ -174,8 +156,6 @@ IMAGES
 */
 
 @media screen and (min-width: 415px) {
-
-
   /*
 
 ==========================
@@ -184,7 +164,8 @@ SECTIONS
 
 */
 
-  section, footer {
+  section,
+  footer {
     flex-direction: row;
   }
 
@@ -192,7 +173,6 @@ SECTIONS
     flex-direction: row;
     padding: 5%;
   }
-
 
   .section-intro {
     margin-bottom: 5%;
@@ -203,7 +183,7 @@ SECTIONS
     margin-top: auto;
     margin-bottom: auto;
   }
-/*
+  /*
 
 ==========================
 SECTIONS DISPLAY
@@ -211,34 +191,22 @@ SECTIONS DISPLAY
 
 */
 
-.proj-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
+  .proj-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
-.proj-card {
-  transition: color 0.25s, background-color 0.25s, box-shadow 0.25s, transform 0.25s;
-}
+  .proj-card {
+    transition: color 0.25s, background-color 0.25s, box-shadow 0.25s,
+      transform 0.25s;
+  }
 
-.proj-card:hover {
-  padding-bottom: 1%;
-  box-shadow: 0 0 15px black;
-}
+  .proj-card:hover {
+    padding-bottom: 1%;
+    box-shadow: 0 0 15px black;
+  }
 
-
-.proj-description {
-  width: 90%
-}
-
-
-
-/*
-
-==========================
-TYPOGRAPHY
-==========================
-
-*/
-
-
+  .proj-description {
+    width: 90%;
+  }
 }

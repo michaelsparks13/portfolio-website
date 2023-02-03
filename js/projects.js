@@ -5,7 +5,7 @@ const projects = {
     info: "To start my journalism career, I needed somewhere to publish. So I taught myself how to code and bulit this website. It's pretty cool.",
     tools: "",
     link: "https://www.crowdedparks.org",
-    img: "../images/projects/crowded-cover.jpg",
+    img: "images/projects/crowded-cover.jpg",
   },
 
   Flavortown: {
@@ -15,7 +15,7 @@ const projects = {
     tools:
       "Made with Mapbox Studio & Mapbox GL to design and place the map. Python & BeautifulSoup to scrape the data.",
     link: "https://michael-sparks13.github.io/flavortown/",
-    img: "../images/projects/guy-fieri.jpeg",
+    img: "images/projects/guy-fieri.jpeg",
   },
 
   CapeTown: {
@@ -24,7 +24,7 @@ const projects = {
     info: "This map highlights Cape Town, South Africa. Including: some of its most popular neighborhoods and a few surroudning cities.",
     tools: "Made with Leaflet",
     link: "https://michael-sparks13.github.io/cape-town/",
-    img: "../images/projects/cape-town.webp",
+    img: "images/projects/cape-town.webp",
   },
 
   Aus: {
@@ -33,7 +33,7 @@ const projects = {
     info: "A simple map I built to have some fun with the UI and colors.",
     tools: "Built using Leaflet",
     link: "https://michael-sparks13.github.io/australia/",
-    img: "../images/projects/aus.jpeg",
+    img: "images/projects/aus.jpeg",
   },
 
   LotsAndSpaces: {
@@ -43,7 +43,7 @@ const projects = {
     tools:
       "Map style made with Mapbox. Data processing done with QGIS and Python Geopandas",
     link: "https://michael-sparks13.github.io/lots-and-spaces/",
-    img: "../images/projects/westchester.webp",
+    img: "images/projects/westchester.webp",
   },
 
   Turbines: {
@@ -51,8 +51,8 @@ const projects = {
     coords: [43.10490761460963, -91.25129270151406],
     info: "Exploring where wind turbines are really located across the country",
     tools: "Layers styled and calculations done with QGIS",
-    link: "../images/projects/wind-turbine.png",
-    img: "../images/projects/wind-turbine.png",
+    link: "images/projects/wind-turbine.png",
+    img: "images/projects/wind-turbine.png",
   },
 
   Geoprocessing: {
@@ -60,8 +60,8 @@ const projects = {
     coords: [39.91766323926189, -75.38960351778898],
     info: "Using data from Open Street Map I calculated, using the built-in GDAL library within QGIS, to analyze how many miles of walking paths are in Delaware County, PA",
     tools: "Layers styled and calculations done with QGIS",
-    link: "../images/projects/geoprocessing.png",
-    img: "../images/projects/geoprocessing.png",
+    link: "images/projects/geoprocessing.png",
+    img: "images/projects/geoprocessing.png",
   },
 
   Arches: {
@@ -71,7 +71,7 @@ const projects = {
     tools:
       "I used GDAL and QGIS to convert raster elevation units and create contours. Mapbox to display the final data and styles.",
     link: "https://michael-sparks13.github.io/arches/",
-    img: "../images/projects/arches.jpeg",
+    img: "images/projects/arches.jpeg",
   },
 
   PCT: {
@@ -80,8 +80,8 @@ const projects = {
     info: "I took an old school map of the US in 1957 by Erwin Raisz, vectorized it in QGIS, and then added a country layer and trail layer. I modeled the map's style after the original by Mr. Raisz",
     tools:
       "Made with QGIS to create & style layers & GDAL to vectorize the raster image",
-    link: "../images/projects/pct.png",
-    img: "../images/projects/pct.png",
+    link: "images/projects/pct.png",
+    img: "images/projects/pct.png",
   },
 
   Delmarva: {
@@ -90,7 +90,7 @@ const projects = {
     info: "I traveled to the Delmarva Peninsula to look at how climate change is changing this historic area",
     tools: "Originally published on CrowdedParks.org",
     link: "https://www.crowdedparks.org/articles/delmarva.html",
-    img: "../images/projects/delmarva.jpeg",
+    img: "images/projects/delmarva.jpeg",
   },
 
   Assateague: {
@@ -99,7 +99,7 @@ const projects = {
     info: "I traveled to Assateague Island National Seashore to see their unique approach to handling climate change",
     tools: "Originally published on CrowdedParks.org",
     link: "https://www.crowdedparks.org/articles/assateague-island.html",
-    img: "../images/projects/assateague.jpeg",
+    img: "images/projects/assateague.jpeg",
   },
 
   EV: {
@@ -108,7 +108,7 @@ const projects = {
     info: "An exploration of the promises of EVs and the challenges the Park Service faces in transitioning to them.",
     tools: "Originally published on NationalParksTraveler.org",
     link: "https://www.crowdedparks.org/articles/electric-vehicles.html",
-    img: "../images/projects/solar-array.webp",
+    img: "images/projects/solar-array.webp",
   },
 
   GDP: {
@@ -116,8 +116,8 @@ const projects = {
     coords: [7.188086166883424, -76.03973083459546],
     info: "Mapping how GDP per capita and internet connectivity are correlated around the world",
     tools: "Built with QGIS",
-    link: "../images/projects/gdp.png",
-    img: "../images/projects/gdp.png",
+    link: "images/projects/gdp.png",
+    img: "images/projects/gdp.png",
   },
 
   Popden: {
@@ -125,8 +125,8 @@ const projects = {
     coords: [40.43474454258068, -79.90385417292746],
     info: "Surprising no one, PA's population is concentrated near Philly and Pittsburgh.",
     tools: "Layers styled and calculations done with QGIS",
-    link: "../images/projects/pa_popden.png",
-    img: "../images/projects/pa_popden.png",
+    link: "images/projects/pa_popden.png",
+    img: "images/projects/pa_popden.png",
   },
 
   Hydropower: {
@@ -135,7 +135,7 @@ const projects = {
     info: "There's a lot of hydropower in New England",
     tools: "Made with Leaflet; Markers drawn with D3",
     link: "https://michael-sparks13.github.io/newengland-hydropower/",
-    img: "../images/projects/hydropower.jpeg",
+    img: "images/projects/hydropower.jpeg",
   },
 
   PaFires: {
@@ -143,8 +143,8 @@ const projects = {
     coords: [41.41369331460013, -75.64258398846081],
     info: "Thanks to the US Forest Research Service, we can finally uncover how many wildfires there <em>really</em> are in PA.",
     tools: "Layers styled and calculations done with QGIS",
-    link: "../images/projects/pa_fires.png",
-    img: "../images/projects/pa_fires.png",
+    link: "images/projects/pa_fires.png",
+    img: "images/projects/pa_fires.png",
   },
 
   Volunteers: {
@@ -153,7 +153,7 @@ const projects = {
     info: "An look into how and why the Park Service relies so heavily on volunteer labor",
     tools: "Originally published on CrowdedParks.org",
     link: "https://www.crowdedparks.org/articles/volunteers-article.html",
-    img: "../images/projects/volunteers.jpeg",
+    img: "images/projects/volunteers.jpeg",
   },
 
   CrowdingPt1: {
@@ -163,7 +163,7 @@ const projects = {
     tools:
       "Data pulled, cleaned, and visualized using Python and Pandas. \nOriginally published on CrowdedParks.org",
     link: "https://www.crowdedparks.org/articles/crowding-part-one.html",
-    img: "../images/projects/crowded-pt1.jpeg",
+    img: "images/projects/crowded-pt1.jpeg",
   },
 
   CrowdingPt2: {
@@ -172,7 +172,7 @@ const projects = {
     info: "Using data to investigate how crowded national parks really are",
     tools: "Originally published on CrowdedParks.org",
     link: "https://www.crowdedparks.org/articles/crowding-part-two.html",
-    img: "../images/projects/crowded-pt2.jpeg",
+    img: "images/projects/crowded-pt2.jpeg",
   },
 
   EtchASketch: {
@@ -180,8 +180,8 @@ const projects = {
     coords: [46.85986952962811, -114.13911146018496],
     info: "An interactive game of Etch-a-Sketch. Give it a try!",
     tools: "Made with JavaScript",
-    link: "../eng-projects/sketch.html",
-    img: "../images/projects/etchasketch.jpeg",
+    link: "eng-projects/sketch.html",
+    img: "images/projects/etchasketch.jpeg",
   },
 
   Parkle: {
@@ -190,7 +190,7 @@ const projects = {
     info: "A play on the popular word game, but for parks!",
     tools: "Made with National Park Service API",
     link: "https://michaelsparks13.github.io/guessParks/",
-    img: "../images/projects/nps.jpeg",
+    img: "images/projects/nps.jpeg",
   },
 
   FIRMS: {
@@ -199,7 +199,7 @@ const projects = {
     info: "Using an API provided by NASA, this map shows active fires and thermal anomalies for a week in May 2022. You can over over each point to learn more about it.",
     tools: "Made with NASA's Fire Info for Resource Mgmt API",
     link: "https://michaelsparks13.github.io/firms/",
-    img: "../images/projects/fire.jpeg",
+    img: "images/projects/fire.jpeg",
   },
 
   FireIsland: {
@@ -208,7 +208,7 @@ const projects = {
     info: "When Hurricane Sandy breached Fire Island the Park Service made an unusual decision.",
     tools: "Originally published on NationalParksTraveler.org",
     link: "https://www.crowdedparks.org/articles/fire-island.html",
-    img: "../images/projects/fire-island.jpeg",
+    img: "images/projects/fire-island.jpeg",
   },
 
   Expansion: {
@@ -217,7 +217,7 @@ const projects = {
     info: "In the West? Sure. But there's also more room to grow out east than most people realize.",
     tools: "Originally published on NationalParksTraveler.org",
     link: "https://www.crowdedparks.org/articles/eastern-expansion.html",
-    img: "../images/projects/eastern-expansion.jpeg",
+    img: "images/projects/eastern-expansion.jpeg",
   },
 
   Hatteras: {
@@ -226,7 +226,7 @@ const projects = {
     info: "A new report from NOAA provides more certainty on what sea level rise will do to our parks.",
     tools: "Originally published on NationalParksTraveler.org",
     link: "https://www.crowdedparks.org/articles/sea-level-rise.html",
-    img: "../images/projects/cape-hatteras.jpeg",
+    img: "images/projects/cape-hatteras.jpeg",
   }
 
   //   end of projects object

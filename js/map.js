@@ -2,10 +2,29 @@ import { projects } from "./projects.js";
 
 const center = [30.654162719283736, 3.679454918417687]
 
+function setInitialMapZoom(windowWidth) {
+  // create variable for map zoom level
+  let mapZoom;    
+
+  // test for various browser widths
+  // fine tune the conditional statements as needed for your map
+  if (windowWidth < 500) {
+     mapZoom = 0;
+  }  else {
+     mapZoom = 2;
+  }
+  return mapZoom;
+}
+// browser window width
+var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+
+
+
 // center map on cape town
 let options = {
   center: center,
-  zoom: 2,
+  zoom: setInitialMapZoom(windowWidth),
 };
 
 let map = L.map("map", options);

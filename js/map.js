@@ -1,25 +1,95 @@
 import { projects } from "./projects.js";
 
-const center = [30.654162719283736, 3.679454918417687]
+const center = [30.654162719283736, 3.679454918417687];
+// browser window width
+let windowWidth =
+  window.innerWidth ||
+  document.documentElement.clientWidth ||
+  document.body.clientWidth;
+
+let close;
+
+// ============================
+// ============================
+// HELPER FUNCTIONS
+// ============================
+// ============================
 
 function setInitialMapZoom(windowWidth) {
   // create variable for map zoom level
-  let mapZoom;    
-
+  let mapZoom;
   // test for various browser widths
   // fine tune the conditional statements as needed for your map
   if (windowWidth < 500) {
-     mapZoom = 0;
-  }  else {
-     mapZoom = 2;
+    mapZoom = 0;
+  } else {
+    mapZoom = 2;
   }
   return mapZoom;
 }
-// browser window width
-var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
+function createMarkers(projects) {
+  for (let project in projects) {
+    let mkr = L.marker(projects[project].coords, { title: project }).addTo(map);
+    markersLayer.addLayer(mkr);
+  }
+}
 
+function boundMap(coords) {
+  map.fitBounds(coords);
+}
 
+function showSideBar(e) {
+  let sb = document.getElementById("sidebar");
+  let project = e.layer.options.title;
+  sb.innerHTML = "";
+
+  //create sidebar content
+  let content = `
+    <article class="sidebar-content">
+    <h1>${projects[project].name}</h1>
+    <div class="info-content">
+        <div><img src="${projects[project].img}" alt="project image">
+        <div class="info-description">${projects[project].info}</div>
+        <div class="tools">${projects[project].tools}</div>
+        <div class="proj-link"><a href="${projects[project].link}" target="_" alt="$maps[k].cityName} map">See it here</a></div>
+    </div>
+    </article>`;
+
+  sb.innerHTML += content;
+  sidebar.toggle();
+
+  //bound map to proj location when sidebar is open
+  map.fitBounds([e.latlng], {
+    maxZoom: 9,
+    paddingTopLeft: [200, 50],
+  });
+
+  close = document.getElementsByClassName("close");
+
+  //center zoom and minZoom on sidebar close
+  close[0].addEventListener("click", function () {
+    map.setView(center, 2);
+  });
+}
+
+function showPopUp(e) {
+  let project = e.layer.options.title;
+
+  L.popup({
+    offset: [0, -32],
+    className: "popup",
+  })
+    .setLatLng(projects[project].coords)
+    .setContent(`${projects[project].name}`)
+    .openOn(map);
+}
+
+// ============================
+// ============================
+//  MAP
+// ============================
+// ============================
 
 // center map on cape town
 let options = {
@@ -44,72 +114,15 @@ let basemap_attributes = {
 
 let tiles = L.tileLayer(basemap_url, basemap_attributes).addTo(map);
 
-// add marker to map
+//sidebar via https://github.com/Turbo87/leaflet-sidebar
 let sidebar = L.control.sidebar("sidebar", {
   position: "left",
 });
 
 let markersLayer = L.featureGroup().addTo(map);
 
-function createMarkers(projects) {
-  for (let project in projects) {
-    let mkr = L.marker(projects[project].coords, { title: project }).addTo(map);
-
-    markersLayer.addLayer(mkr);
-  }
-}
-
-function boundMap(coords) {
-  map.fitBounds(coords);
-}
-
-let close;
-
-function markerOnClick(e) {
-  let sb = document.getElementById("sidebar");
-  let project = e.layer.options.title;
-  sb.innerHTML = "";
-
-  let content = `
-    <article class="sidebar-content">
-    <h1>${projects[project].name}</h1>
-    <div class="info-content">
-        <div><img src="${projects[project].img}" alt="project image">
-        <div class="info-description">${projects[project].info}</div>
-        <div class="tools">${projects[project].tools}</div>
-        <div class="proj-link"><a href="${projects[project].link}" target="_" alt="$maps[k].cityName} map">See it here</a></div>
-    </div>
-    </article>`;
-
-  sb.innerHTML += content;
-  sidebar.toggle();
-
-  //can i refactor this into a standalone function?
-  map.fitBounds([e.latlng], {
-    maxZoom: 9,
-    paddingTopLeft: [200, 50],
-  });
-
-  close = document.getElementsByClassName("close");
-
-  close[0].addEventListener("click", function () {
-    map.setView(center, 2);
-  });
-}
-
-function testfunc(e) {
-  let project = e.layer.options.title;
-
-  L.popup({
-    offset: [0, -25],
-    className: 'popup'
-  })
-    .setLatLng(projects[project].coords)
-    .setContent(`${projects[project].name}`)
-    .openOn(map);
-}
-
+// run functions to create map
 createMarkers(projects);
 map.addControl(sidebar);
-markersLayer.on("click", markerOnClick);
-markersLayer.on("mouseover", testfunc);
+markersLayer.on("click", showSideBar);
+markersLayer.on("mouseover", showPopUp);

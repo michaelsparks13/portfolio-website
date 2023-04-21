@@ -1,28 +1,26 @@
 import { projects } from "./projects.js";
 
-
 /* HELPER FUNCTIONS */
 
 function createList(projects) {
   for (let project in projects) {
-    let projBox = document.createElement("div")
-        projBox.setAttribute('class', 'proj-card show-on-scroll')
-    
-    // const projImg = document.createElement("img");
-    // const projInfo = document.createElement("div");
-    document.querySelector('.proj-cards').appendChild(projBox)
+    let projBox = document.createElement("div");
+    projBox.setAttribute("class", "proj-card show-on-scroll");
 
-    let content = `<a href=${projects[project].link} target="_">
-                   <img class="proj-img" src="${projects[project].img}">
-                   <h1>${projects[project].name}</h1>
-                   <p class="proj-description">${projects[project].info}<p>
-                   <p>${projects[project].tools}<p>
-                   <a href=${projects[project].link} target="_">See it here</a></a>`
+    document.querySelector(".proj-cards").appendChild(projBox);
+
+    let content = `<a href=${projects[project].link} target="_" role="button">
+                   <img class="card-img-top" src="${projects[project].img}">
+                    <h1 class="card-title">${projects[project].name}</h1>
+                    <p class="card-text">${projects[project].info}</p>
+                    <p>${projects[project].tools}</p>
+                    <button type="button" class="btn btn-dark" href=${projects[project].link} target="_">See it here</button>
+                   
+                   </a>`;
 
     projBox.innerHTML = content;
-
   }
-};
+}
 
 /*
 

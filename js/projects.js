@@ -36,6 +36,15 @@ const projects = {
     img: "images/projects/phil-hearing-IYfp2Ixe9nM-unsplash.jpg",
   },
 
+  Unemployment: {
+    name: "US Unemployment Rates",
+    coords: [30.483901539326855, -91.13732980931077],
+    info: "Interactively mapping 2001-2021 unemployment rates county-by-county",
+    tools: "Built using Leaflet",
+    link: "https://michael-sparks13.github.io/us-unemployment/",
+    img: "images/projects/andrew-valdivia-PO1j9yiZek8-unsplash.jpg",
+  },
+
   LotsAndSpaces: {
     name: "Exploring the natural and built environment in Westchester County",
     coords: [41.05306540117774, -73.78076437707696],

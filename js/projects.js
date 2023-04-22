@@ -115,7 +115,7 @@ const projects = {
     name: "Hydropower in New England",
     coords: [46.86855654933388, -68.48888247101007],
     info: "There's a lot of hydropower in New England",
-    tools: "Made with Leaflet; Markers drawn with D3",
+    tools: "Made with Leaflet.",
     link: "https://michael-sparks13.github.io/newengland-hydropower/",
     img: "images/projects/hydropower.jpeg",
   },

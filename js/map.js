@@ -1,6 +1,14 @@
 import { projects } from "./projects.js";
 
-const center = [30.654162719283736, 3.679454918417687];
+//alaksa to ~madagascar
+const bounds = [
+  [54.05000545398244, -132.43583594351836],
+  [-12.81285112880556, 49.47422273149212],
+];
+
+//center 
+const center = [22.03642143751412, -35.316932205822646]
+
 // browser window width
 let windowWidth =
   window.innerWidth ||
@@ -19,11 +27,10 @@ function setInitialMapZoom(windowWidth) {
   // create variable for map zoom level
   let mapZoom;
   // test for various browser widths
-  // fine tune the conditional statements as needed for your map
   if (windowWidth < 500) {
-    mapZoom = 0;
+    mapZoom = 4;
   } else {
-    mapZoom = 2;
+    mapZoom = 6;
   }
   return mapZoom;
 }
@@ -69,7 +76,7 @@ function showSideBar(e) {
 
   //center zoom and minZoom on sidebar close
   close[0].addEventListener("click", function () {
-    map.setView(center, 2);
+    map.setView(boundMap(bounds), 2);
   });
 }
 
@@ -93,7 +100,7 @@ function showPopUp(e) {
 
 // center map on cape town
 let options = {
-  center: center,
+  //center: center,
   zoom: setInitialMapZoom(windowWidth),
 };
 
@@ -121,7 +128,10 @@ let sidebar = L.control.sidebar("sidebar", {
 
 let markersLayer = L.featureGroup().addTo(map);
 
+//map.setMaxBounds(bounds);
+
 // run functions to create map
+boundMap(bounds);
 createMarkers(projects);
 map.addControl(sidebar);
 markersLayer.on("click", showSideBar);

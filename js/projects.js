@@ -27,13 +27,13 @@ const projects = {
     img: "images/projects/kenyan_school.webp",
   },
 
-  Aus: {
-    name: "Unique Cities Across Australia",
-    coords: [-31.922105150564573, 115.85575771209025],
-    info: "A simple map I built to have some fun with the UI and colors.",
+  UsHousing: {
+    name: "US Housing Statistics",
+    coords: [39.70891413649224, -105.01057200146928],
+    info: "Interactively mapping homeownership rates across the country",
     tools: "Built using Leaflet",
-    link: "https://michael-sparks13.github.io/australia/",
-    img: "images/projects/aus.jpeg",
+    link: "https://michael-sparks13.github.io/housing-data/",
+    img: "images/projects/phil-hearing-IYfp2Ixe9nM-unsplash.jpg",
   },
 
   LotsAndSpaces: {

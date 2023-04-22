@@ -18,13 +18,13 @@ const projects = {
     img: "images/projects/guy-fieri.jpeg",
   },
 
-  CapeTown: {
-    name: "Cape Town, SA",
-    coords: [-34.00185573168237, 18.52470605599893],
-    info: "This map highlights Cape Town, South Africa. Including: some of its most popular neighborhoods and a few surroudning cities.",
+  KenyanEducation: {
+    name: "Kenyan Education",
+    coords: [0.2853733499853051, 37.87327360373084],
+    info: "This map looks at trends in school enrollment by gender, from grades 1 through 8 in Kenya.",
     tools: "Made with Leaflet",
-    link: "https://michael-sparks13.github.io/cape-town/",
-    img: "images/projects/cape-town.webp",
+    link: "https://michael-sparks13.github.io/kenyan-education/",
+    img: "images/projects/kenyan_school.webp",
   },
 
   Aus: {
@@ -53,15 +53,6 @@ const projects = {
     tools: "Layers styled and calculations done with QGIS",
     link: "images/projects/wind-turbine.png",
     img: "images/projects/wind-turbine.png",
-  },
-
-  Geoprocessing: {
-    name: "Geoprocessing with OSM and QGIS",
-    coords: [39.91766323926189, -75.38960351778898],
-    info: "Using data from Open Street Map I calculated, using the built-in GDAL library within QGIS, to analyze how many miles of walking paths are in Delaware County, PA",
-    tools: "Layers styled and calculations done with QGIS",
-    link: "images/projects/geoprocessing.png",
-    img: "images/projects/geoprocessing.png",
   },
 
   Arches: {
@@ -184,15 +175,6 @@ const projects = {
     img: "images/projects/etchasketch.jpeg",
   },
 
-  Parkle: {
-    name: "Parkle the Game",
-    coords: [40.128202495407436, -111.67318896945426],
-    info: "A play on the popular word game, but for parks!",
-    tools: "Made with National Park Service API",
-    link: "https://michaelsparks13.github.io/guessParks/",
-    img: "images/projects/nps.jpeg",
-  },
-
   FIRMS: {
     name: "Active Fires and Thermal Anomalies",
     coords: [22.73180141686002, -102.09298985456519],
@@ -200,24 +182,6 @@ const projects = {
     tools: "Made with NASA's Fire Info for Resource Mgmt API",
     link: "https://michaelsparks13.github.io/firms/",
     img: "images/projects/fire.jpeg",
-  },
-
-  FireIsland: {
-    name: "What the Park Service Learned When Fire Island Was Torn in Two",
-    coords: [40.700275262920506, -72.95833157451744],
-    info: "When Hurricane Sandy breached Fire Island the Park Service made an unusual decision.",
-    tools: "Originally published on NationalParksTraveler.org",
-    link: "https://www.crowdedparks.org/articles/fire-island.html",
-    img: "images/projects/fire-island.jpeg",
-  },
-
-  Expansion: {
-    name: "Is There Room for More Eastern National Parks?",
-    coords: [35.611474138485065, -83.68414686633372],
-    info: "In the West? Sure. But there's also more room to grow out east than most people realize.",
-    tools: "Originally published on NationalParksTraveler.org",
-    link: "https://www.crowdedparks.org/articles/eastern-expansion.html",
-    img: "images/projects/eastern-expansion.jpeg",
   },
 
   Hatteras: {

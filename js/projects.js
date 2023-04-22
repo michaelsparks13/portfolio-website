@@ -75,15 +75,6 @@ const projects = {
     img: "images/projects/pct.png",
   },
 
-  Delmarva: {
-    name: "Climate Change is Coming for Delmarva",
-    coords: [38.425824651494594, -76.10104993831315],
-    info: "I traveled to the Delmarva Peninsula to look at how climate change is changing this historic area",
-    tools: "Originally published on CrowdedParks.org",
-    link: "https://www.crowdedparks.org/articles/delmarva.html",
-    img: "images/projects/delmarva.jpeg",
-  },
-
   Assateague: {
     name: "The National Park Where Preservation Isn't the Goal",
     coords: [38.04527891738589, -75.24531372596016],
@@ -182,15 +173,6 @@ const projects = {
     tools: "Made with NASA's Fire Info for Resource Mgmt API",
     link: "https://michaelsparks13.github.io/firms/",
     img: "images/projects/fire.jpeg",
-  },
-
-  Hatteras: {
-    name: "A House Fell on Cape Hatteras",
-    coords: [35.397478946946556, -75.48899745843084],
-    info: "A new report from NOAA provides more certainty on what sea level rise will do to our parks.",
-    tools: "Originally published on NationalParksTraveler.org",
-    link: "https://www.crowdedparks.org/articles/sea-level-rise.html",
-    img: "images/projects/cape-hatteras.jpeg",
   }
 
   //   end of projects object

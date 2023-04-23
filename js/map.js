@@ -6,8 +6,8 @@ const bounds = [
   [-12.81285112880556, 49.47422273149212],
 ];
 
-//center 
-const center = [22.03642143751412, -35.316932205822646]
+//center
+const center = [22.03642143751412, -35.316932205822646];
 
 // browser window width
 let windowWidth =
@@ -37,8 +37,12 @@ function setInitialMapZoom(windowWidth) {
 
 function createMarkers(projects) {
   for (let project in projects) {
-    let mkr = L.marker(projects[project].coords, { title: project }).addTo(map);
+    let mkr = L.marker(
+      projects[project].coords,
+      { title: project, icon: blackIcon }
+    ).addTo(map);
     markersLayer.addLayer(mkr);
+    console.log(mkr)
   }
 }
 
@@ -98,21 +102,30 @@ function showPopUp(e) {
 // ============================
 // ============================
 
-// center map on cape town
 let options = {
-  //center: center,
   zoom: setInitialMapZoom(windowWidth),
 };
 
 let map = L.map("map", options);
 
+var blackIcon = new L.Icon({
+  iconUrl:
+    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png",
+  shadowUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
+
 //   create map details
 let basemap_url =
-  "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png";
+  "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}";
 
 let basemap_attributes = {
   attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   subdomains: "abcd",
   minZoom: 0,
   maxZoom: 20,

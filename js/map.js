@@ -121,11 +121,11 @@ var blackIcon = new L.Icon({
 
 //   create map details
 let basemap_url =
-  "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}";
+  "https://api.mapbox.com/styles/v1/michaelsparks13/clgty70gf006x01pfc1toeiq9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibWljaGFlbHNwYXJrczEzIiwiYSI6ImNsMmRoczNjMDAwMWkzYm10dzRyb3gxenQifQ.56aTkg40fV3OsQibg27VEA";
 
 let basemap_attributes = {
   attribution:
-    'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    'basemap tiles built with Mapbox by author',
   subdomains: "abcd",
   minZoom: 0,
   maxZoom: 20,

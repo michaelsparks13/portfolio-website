@@ -198,9 +198,7 @@ SECTIONS
   }
 
   h2 {
-    font-size: 2em;
     font-weight: 300;
-    letter-spacing: 0.04em;
     font-family: "avenir", Sans-Serif;
     font-style: italic;
   }

@@ -67,7 +67,6 @@ body {
     width: 100%;
     height: 540px;
     margin: 10px auto;
-    border: 2px solid #d3d3d3;
   }
 
   .leaflet-popup-content-wrapper, .leaflet-popup-tip {

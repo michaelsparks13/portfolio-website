@@ -18,14 +18,6 @@ const projects = {
     img: "images/projects/guy-fieri.jpeg",
   },
 
-  InfrastructureFunding: {
-    name: "Infrastructure Funding",
-    coords: [36.387994641328966, -105.29975084786386],
-    info: "This map charts funding from the 2021 Infrastructure Investment and Jobs Act",
-    tools: "Built by Leaflet and QGIS",
-    link: "https://michael-sparks13.github.io/infrastructure-funding/",
-    img: "images/projects/infra-spend.png",
-  },
 
   KenyanEducation: {
     name: "Kenyan Education",

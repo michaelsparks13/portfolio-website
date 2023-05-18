@@ -91,10 +91,6 @@ SECTIONS DISPLAY
   border: 1px solid black;
 }
 
-/* .proj-img {
-  width: 50%;
-  height: 50%;
-} */
 
 .proj-card.is-visible {
   opacity: 1;

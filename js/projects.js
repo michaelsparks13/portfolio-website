@@ -15,9 +15,8 @@ const projects = {
     tools:
       "Made with Mapbox Studio & Mapbox GL to design and place the map. Python & BeautifulSoup to scrape the data.",
     link: "https://michael-sparks13.github.io/flavortown/",
-    img: "images/projects/guy-fieri.jpeg",
+    img: "images/projects/flavortown.png",
   },
-
 
   KenyanEducation: {
     name: "Kenyan Education",
@@ -25,7 +24,7 @@ const projects = {
     info: "This map looks at trends in school enrollment by gender, from grades 1 through 8 in Kenya.",
     tools: "Made with Leaflet",
     link: "https://michael-sparks13.github.io/kenyan-education/",
-    img: "images/projects/kenyan_school.webp",
+    img: "images/projects/kenya.png",
   },
 
   UsHousing: {
@@ -34,7 +33,7 @@ const projects = {
     info: "Interactively mapping homeownership rates across the country",
     tools: "Built using Leaflet",
     link: "https://michael-sparks13.github.io/housing-data/",
-    img: "images/projects/phil-hearing-IYfp2Ixe9nM-unsplash.jpg",
+    img: "images/projects/housing-stats.png",
   },
 
   Unemployment: {
@@ -43,7 +42,7 @@ const projects = {
     info: "Interactively mapping 2001-2021 unemployment rates county-by-county",
     tools: "Built using Leaflet",
     link: "https://michael-sparks13.github.io/us-unemployment/",
-    img: "images/projects/andrew-valdivia-PO1j9yiZek8-unsplash.jpg",
+    img: "images/projects/unemployment.png",
   },
 
   LotsAndSpaces: {
@@ -53,7 +52,7 @@ const projects = {
     tools:
       "Map style made with Mapbox. Data processing done with QGIS and Python Geopandas",
     link: "https://michael-sparks13.github.io/lots-and-spaces/",
-    img: "images/projects/westchester.webp",
+    img: "images/projects/parking-lots.png",
   },
 
   Turbines: {
@@ -127,26 +126,26 @@ const projects = {
     info: "There's a lot of hydropower in New England",
     tools: "Made with Leaflet.",
     link: "https://michael-sparks13.github.io/newengland-hydropower/",
-    img: "images/projects/hydropower.jpeg",
+    img: "images/projects/hydropower.png",
   },
 
-  PaFires: {
-    name: "Pennsylvania Wildfires",
-    coords: [41.41369331460013, -75.64258398846081],
-    info: "Thanks to the US Forest Research Service, we can finally uncover how many wildfires there <em>really</em> are in PA.",
-    tools: "Layers styled and calculations done with QGIS",
-    link: "images/projects/pa_fires.png",
-    img: "images/projects/pa_fires.png",
-  },
+  // PaFires: {
+  //   name: "Pennsylvania Wildfires",
+  //   coords: [41.41369331460013, -75.64258398846081],
+  //   info: "Thanks to the US Forest Research Service, we can finally uncover how many wildfires there <em>really</em> are in PA.",
+  //   tools: "Layers styled and calculations done with QGIS",
+  //   link: "images/projects/pa_fires.png",
+  //   img: "images/projects/pa_fires.png",
+  // },
 
-  Volunteers: {
-    name: "Our National Parks' Secret Weapon? Volunteers.",
-    coords: [32.28315467563012, -111.16455109035692],
-    info: "An look into how and why the Park Service relies so heavily on volunteer labor",
-    tools: "Originally published on CrowdedParks.org",
-    link: "https://www.crowdedparks.org/articles/volunteers-article.html",
-    img: "images/projects/volunteers.jpeg",
-  },
+  // Volunteers: {
+  //   name: "Our National Parks' Secret Weapon? Volunteers.",
+  //   coords: [32.28315467563012, -111.16455109035692],
+  //   info: "An look into how and why the Park Service relies so heavily on volunteer labor",
+  //   tools: "Originally published on CrowdedParks.org",
+  //   link: "https://www.crowdedparks.org/articles/volunteers-article.html",
+  //   img: "images/projects/volunteers.jpeg",
+  // },
 
   CrowdingPt1: {
     name: "Crowded Parks Part One",
@@ -167,14 +166,14 @@ const projects = {
     img: "images/projects/crowded-pt2.jpeg",
   },
 
-  EtchASketch: {
-    name: "Etch-a-Sketch",
-    coords: [46.85986952962811, -114.13911146018496],
-    info: "An interactive game of Etch-a-Sketch. Give it a try!",
-    tools: "Made with JavaScript",
-    link: "eng-projects/sketch.html",
-    img: "images/projects/etchasketch.jpeg",
-  },
+  // EtchASketch: {
+  //   name: "Etch-a-Sketch",
+  //   coords: [46.85986952962811, -114.13911146018496],
+  //   info: "An interactive game of Etch-a-Sketch. Give it a try!",
+  //   tools: "Made with JavaScript",
+  //   link: "eng-projects/sketch.html",
+  //   img: "images/projects/etchasketch.jpeg",
+  // },
 
   FIRMS: {
     name: "Active Fires and Thermal Anomalies",
@@ -182,7 +181,7 @@ const projects = {
     info: "Using an API provided by NASA, this map shows active fires and thermal anomalies for a week in May 2022. You can over over each point to learn more about it.",
     tools: "Made with NASA's Fire Info for Resource Mgmt API",
     link: "https://michaelsparks13.github.io/firms/",
-    img: "images/projects/fire.jpeg",
+    img: "images/projects/fire.png",
   },
 
   //   end of projects object

@@ -156,6 +156,11 @@ IMAGES
   height: 60%;
 }
 
+.proj-card .card-img-top {
+  object-fit: cover;
+  height: calc(100px + 10vw);
+}
+
 /*
 
 

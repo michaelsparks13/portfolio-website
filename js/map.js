@@ -37,12 +37,20 @@ function setInitialMapZoom(windowWidth) {
 
 function createMarkers(projects) {
   for (let project in projects) {
-    let mkr = L.marker(
+    if (mainProjects.includes(projects[project].name)) {
+      let mkr = L.marker(
       projects[project].coords,
-      { title: project, icon: blackIcon }
+      { title: project, icon: starIcon }
     ).addTo(map);
     markersLayer.addLayer(mkr);
-    console.log(mkr)
+    } else {
+      let mkr = L.marker(projects[project].coords, {
+        title: project,
+        icon: blackIcon,
+      }).addTo(map);
+      markersLayer.addLayer(mkr);
+      console.log(mkr);
+    }
   }
 }
 
@@ -108,7 +116,15 @@ let options = {
 
 let map = L.map("map", options);
 
-var blackIcon = new L.Icon({
+const mainProjects = [
+  "CrowdedParks.org",
+  "Flavortown, USA",
+  "Kenyan Education",
+  "US Unemployment Rates",
+  "Calculating Wind Turbine Density",
+];
+
+let blackIcon = new L.Icon({
   iconUrl:
     "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png",
   shadowUrl:
@@ -118,6 +134,19 @@ var blackIcon = new L.Icon({
   popupAnchor: [1, -34],
   shadowSize: [41, 41],
 });
+
+let starIcon = new L.Icon({
+  iconUrl: "https://img.icons8.com/fluency/48/000000/star.png",
+  shadowUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+  iconSize: [46, 46],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [60, 41],
+  shawdowAnchor: [12,41]
+});
+
+//https://img.icons8.com/color/48/000000/star--v1.png
 
 //   create map details
 let basemap_url =

@@ -136,14 +136,14 @@ let blackIcon = new L.Icon({
 });
 
 let starIcon = new L.Icon({
-  iconUrl: "https://img.icons8.com/fluency/48/000000/star.png",
+  iconUrl: "https://img.icons8.com/plasticine/100/000000/filled-star.png",
   shadowUrl:
     "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
-  iconSize: [46, 46],
+  iconSize: [50, 50],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
   shadowSize: [60, 41],
-  shawdowAnchor: [12,41]
+  shawdowAnchor: [12, 41],
 });
 
 //https://img.icons8.com/color/48/000000/star--v1.png

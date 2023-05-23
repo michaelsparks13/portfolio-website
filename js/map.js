@@ -36,13 +36,15 @@ function setInitialMapZoom(windowWidth) {
 }
 
 function createMarkers(projects) {
+  console.log(mainProjects)
   for (let project in projects) {
     if (mainProjects.includes(projects[project].name)) {
-      let mkr = L.marker(
-      projects[project].coords,
-      { title: project, icon: starIcon }
-    ).addTo(map);
-    markersLayer.addLayer(mkr);
+      let mkr = L.marker(projects[project].coords, {
+        title: project,
+        icon: starIcon,
+      }).addTo(map);
+      markersLayer.addLayer(mkr);
+      
     } else {
       let mkr = L.marker(projects[project].coords, {
         title: project,
@@ -95,13 +97,24 @@ function showSideBar(e) {
 function showPopUp(e) {
   let project = e.layer.options.title;
 
-  L.popup({
-    offset: [0, -32],
-    className: "popup",
-  })
-    .setLatLng(projects[project].coords)
-    .setContent(`${projects[project].name}`)
-    .openOn(map);
+  if (mainMarkers.includes(project)) {
+    L.popup({
+      offset: [10, -25],
+      className: "popup",
+    })
+      .setLatLng(projects[project].coords)
+      .setContent(`${projects[project].name}`)
+      .openOn(map);
+  } else {
+    L.popup({
+      offset: [0, -32],
+      className: "popup",
+    })
+      .setLatLng(projects[project].coords)
+      .setContent(`${projects[project].name}`)
+      .openOn(map);
+  }
+
 }
 
 // ============================
@@ -115,6 +128,14 @@ let options = {
 };
 
 let map = L.map("map", options);
+
+const mainMarkers = [
+  "CrowdedParks",
+  "Flavortown",
+  "KenyanEducation",
+  "Unemployment",
+  "Turbines",
+];
 
 const mainProjects = [
   "CrowdedParks.org",
@@ -146,15 +167,12 @@ let starIcon = new L.Icon({
   shawdowAnchor: [12, 41],
 });
 
-//https://img.icons8.com/color/48/000000/star--v1.png
-
 //   create map details
 let basemap_url =
   "https://api.mapbox.com/styles/v1/michaelsparks13/clgty70gf006x01pfc1toeiq9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibWljaGFlbHNwYXJrczEzIiwiYSI6ImNsMmRoczNjMDAwMWkzYm10dzRyb3gxenQifQ.56aTkg40fV3OsQibg27VEA";
 
 let basemap_attributes = {
-  attribution:
-    'basemap tiles built with Mapbox by author',
+  attribution: "basemap tiles built with Mapbox by author",
   subdomains: "abcd",
   minZoom: 0,
   maxZoom: 20,
@@ -169,8 +187,6 @@ let sidebar = L.control.sidebar("sidebar", {
 });
 
 let markersLayer = L.featureGroup().addTo(map);
-
-//map.setMaxBounds(bounds);
 
 // run functions to create map
 boundMap(bounds);

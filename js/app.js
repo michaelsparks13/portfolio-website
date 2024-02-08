@@ -1,50 +1,26 @@
-/* GLOBAL VARS */
-const sections = Array.from(document.querySelectorAll("section"));
-const myNav = document.querySelector("ul");
-const skillsList = [
-  "Web development",
-  "GIS",
-  "HTML/CSS/JS",
-  "Python",
-  "Mapbox",
-  "Leaflet",
-  "QGIS",
-  "SQL",
-  "Data Visualization",
-  "Geospatial Data Analysis"
-];
+import { projects } from "./projects.js";
 
 /* HELPER FUNCTIONS */
 
-function createNavItem() {
-  for (section of sections) {
-    sectionName = section.getAttribute("id");
-    sectionLink = section.getAttribute("id");
+function createList(projects) {
+  for (let project in projects) {
+    let projBox = document.createElement("div");
+    projBox.setAttribute("class", "proj-card show-on-scroll");
 
-    const listItem = document.createElement("li");
+    document.querySelector(".proj-cards").appendChild(projBox);
 
-    if (!sectionName) {
-      //pass
-    } else {
-      listItem.innerHTML = `<a class='nav-link' href='#${sectionLink}'>${sectionName}</a>`;
-    }
+    let content = `<a href=${projects[project].link} target="_" role="button">
+                   <img class="card-img-top" src="${projects[project].img}">
+                    <h1 class="card-title">${projects[project].name}</h1>
+                    <p class="card-text">${projects[project].info}</p>
+                    <p>${projects[project].tools}</p>
+                    <button type="button" class="btn btn-dark" href=${projects[project].link} target="_">See it here</button>
+                   
+                   </a>`;
 
-    myNav.appendChild(listItem);
+    projBox.innerHTML = content;
   }
 }
-
-const skillsDiv = document.querySelector(".skills");
-
-const createSkillsList = (array, element) => {
-  for (i = 0; i < array.length; i++) {
-    let btn = document.createElement("button");
-    btn.innerText = array[i];
-    btn.setAttribute("type", "button");
-    element.appendChild(btn);
-  }
-};
-
-//maybe useful for filtering list https://www.youtube.com/watch?v=kLFRFy2S6X8
 
 /*
 
@@ -85,22 +61,6 @@ function isElementInViewport(el) {
   );
 }
 
-// mobile nav
-const toggleButton = document.getElementsByClassName("hamburger")[0];
-const navbarLinks = document.getElementsByClassName("nav-links")[0];
-const bar1 = document.getElementsByClassName("bar")[0];
-const bar2 = document.getElementsByClassName("bar")[1];
-
-toggleButton.addEventListener("click", () => {
-  navbarLinks.classList.toggle("active");
-  bar1.classList.add("bar1");
-  bar2.classList.add("bar2");
-  bar1.classList.toggle("close");
-  bar2.classList.toggle("close");
-});
-
 /* RUN FUNCTIONS */
-
-createNavItem();
-createSkillsList(skillsList, skillsDiv);
 loop();
+createList(projects);

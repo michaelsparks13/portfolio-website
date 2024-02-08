@@ -36,7 +36,6 @@ function setInitialMapZoom(windowWidth) {
 }
 
 function createMarkers(projects) {
-  console.log(mainProjects)
   for (let project in projects) {
     if (mainProjects.includes(projects[project].name)) {
       let mkr = L.marker(projects[project].coords, {
@@ -133,16 +132,16 @@ const mainMarkers = [
   "CrowdedParks",
   "Flavortown",
   "KenyanEducation",
-  "Unemployment",
-  "Turbines",
+  "Wildfires",
+  "HistoricTrails",
 ];
 
 const mainProjects = [
   "CrowdedParks.org",
   "Flavortown, USA",
-  "Kenyan Education",
+  "Canadian Wildfires",
   "US Unemployment Rates",
-  "Calculating Wind Turbine Density",
+  "Historic Trails",
 ];
 
 let blackIcon = new L.Icon({

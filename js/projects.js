@@ -17,6 +17,46 @@ const projects = {
     link: "https://michael-sparks13.github.io/flavortown/",
     img: "images/projects/flavortown.png",
   },
+  Wildfires: {
+    name: "Canadian Wildfires",
+    coords: [52.27957033207546, -81.72794296508447],
+    info: "An interactive comparision of 2023's fire season with the previous 10 years.",
+    tools: "Made with Leaflet, MapTiler, and MapShaper.com.",
+    link: "https://michael-sparks13.github.io/canadian-wildfires/",
+    img: "images/projects/wildfires.png",
+  },
+  HistoricTrails: {
+    name: "Historic Trails",
+    coords: [35.72831649431207, -105.69806651872246],
+    info: "A beautiful static map with light shaded relief showing some hisotric trails.",
+    tools: "Created with Adobe Illustrator and data from Natural Earth",
+    link: "images/projects/trails.png",
+    img: "images/projects/trails.png",
+  },
+  CleanEnergy: {
+    name: "Clean Energy Production",
+    coords: [29.57271122843698, -95.46512162452055],
+    info: "Analysing data from the American Clean Power Associate using QGIS, this map looks at the growth in clean energy production spurred by the IRA",
+    tools: "Made with Illustrator",
+    link: "https://michael-sparks13.github.io/kenyan-education/images/projects/cleanEnergySpend_195mm-01.png",
+    img: "images/projects/cleanEnergySpend_195mm-01.png",
+  },
+  Parchment: {
+    name: "Parchment Effect",
+    coords: [34.89127479561025, 39.04538811642043],
+    info: "Experimenting with a 'parchment effect' design style",
+    tools: "Made with Illustrator",
+    link: "images/projects/parchment.png",
+    img: "images/projects/parchment.png",
+  },
+  KenyanEducation: {
+    name: "Kenyan Education",
+    coords: [0.2853733499853051, 37.87327360373084],
+    info: "This map looks at trends in school enrollment by gender, from grades 1 through 8 in Kenya.",
+    tools: "Made with Leaflet",
+    link: "https://michael-sparks13.github.io/kenyan-education/",
+    img: "images/projects/kenya.png",
+  },
 
   KenyanEducation: {
     name: "Kenyan Education",
@@ -166,14 +206,14 @@ const projects = {
     img: "images/projects/crowded-pt2.jpeg",
   },
 
-  // EtchASketch: {
-  //   name: "Etch-a-Sketch",
-  //   coords: [46.85986952962811, -114.13911146018496],
-  //   info: "An interactive game of Etch-a-Sketch. Give it a try!",
-  //   tools: "Made with JavaScript",
-  //   link: "eng-projects/sketch.html",
-  //   img: "images/projects/etchasketch.jpeg",
-  // },
+  EtchASketch: {
+    name: "Etch-a-Sketch",
+    coords: [46.85986952962811, -114.13911146018496],
+    info: "An interactive game of Etch-a-Sketch. Give it a try!",
+    tools: "Made with JavaScript",
+    link: "eng-projects/sketch.html",
+    img: "images/projects/sketch.png",
+  },
 
   FIRMS: {
     name: "Active Fires and Thermal Anomalies",

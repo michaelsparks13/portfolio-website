@@ -1,288 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/globe.jpeg" type="image/x-icon" />
-    <title>Michael Sparks: Data and Climate Journalist</title>
-    <link rel="stylesheet" href="styles/styles.css" />
-  </head>
 
-  <body class="container">
-    <!--NAV BAR-->
-    <nav>
-      <ul class="nav-links"></ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <a href="#" class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-    </nav>
+    <link rel="icon" href="images/projects/uk-logo.png" type="image/x-icon">
 
-    <main>
-      <!--ABOUT SECTION-->
-      <section class="about">
-        <img class="prof-pic" src="images/IMG-4814.jpg" alt="selife" />
+    <title>Michael Sparks - Portfolio</title>
 
-        <div class="about-blurb">
-          <h2 class="header">Michael Sparks</h2>
-          <h3 class="sub-head">Climate Journalist and Software Engineer</h3>
-          <p class="description">
-            I write and report on climate change and use graphics, data, and
-            maps to bring those stories to life.
-          </p>
+
+    <link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Danfo&family=Oswald:wght@200..700&family=Oxygen:wght@300;400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav id="navMenu">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">Portfolio</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+        <div id="hamburgerMenu" class="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
-      </section>
-
-      <!--ENGINEERING SECTION-->
-      <section class="eng" id="Engineering">
-        <div class="section-intro">
-          <h2>Some things I've built</h2>
-          <p>
-            You can see more on my
-            <a
-              id="github-link"
-              href="https://github.com/michaelsparks13"
-              target="_"
-              >Github.</a
-            >
-          </p>
+    </header>
+    <section class="hero">
+        <div class="overlay">
+            <h1>MICHAEL SPARKS</h1>
+            <p>Cartographer | GIS Analyst | Journalist</p>
         </div>
-
-        <div class="filterable">
-          <div class="skills">
-            <div class="section-intro">
-              <p>Some of my skills</p>
-            </div>
-          </div>
-
-          <div class="proj-cards">
-            <div class="proj-card show-on-scroll">
-              <img
-                class="proj-img"
-                src="images/Every_Road-_Denali_(7945497984) (1) copy.jpeg"
-              />
-              <p class="proj-description">
-                <a id="parks" href="https://www.crowdedparks.org"
-                  >CrowdedParks.org</a
-                >
-              </p>
-              <p class="pub-info">
-                A site I built as a home for some of my writing.
-              </p>
-            </div>
-
-            <div class="proj-card show-on-scroll">
-              <img class="proj-img" src="images/image2vector.svg" />
-              <p class="proj-description">
-                <a href="https://michael-sparks13.github.io/flavortown/"
-                  >Flavortown</a
-                >
-              </p>
-              <!-- <p class="pub-info">Powered by the Recreation.gov API</p> -->
-            </div>
-
-            <div class="proj-card show-on-scroll">
-              <img class="proj-img" src="images/radar.jpeg" />
-              <p class="proj-description">
-                <a
-                  id="weatherApp"
-                  href="https://michaelsparks13.github.io/weatherRadar/"
-                >
-                  Weather Radar</a
-                >
-              </p>
-            </div>
-
-            <div class="proj-card show-on-scroll">
-               
-              <img class="proj-img" src="images/NPS-logo.jpeg" />
-              <p class="proj-description">
-                <a href="https://michaelsparks13.github.io/guessParks/"
-                  >PARKLE!</a
-                >
-              </p>
-            </div>
-
-            <div class="proj-card show-on-scroll">
-              <img
-                class="proj-img"
-                src="images/joana-abreu-aFkzShngdaw-unsplash.jpg"
-              />
-              <p class="proj-description">
-                <a id="sketch" href="eng-projects/sketch.html">Etch-A-Sketch</a>
-              </p>
-            </div>
-
-            <div class="proj-card show-on-scroll">
-               
-              <img class="proj-img" src="images/nasa_black.png" />
-              <p class="proj-description">
-                <a href="https://michaelsparks13.github.io/firms/"
-                  >Active Fires and Thermal Anomalies</a
-                >
-              </p>
-              <p class="pub-info">Powered by NASA</p>
-            </div>
-
-            <div class="proj-card show-on-scroll">
-               
-              <img
-                class="proj-img"
-                src="images/lucy-chian-LYq7W1lRal4-unsplash.jpg"
-              />
-              <p class="proj-description">
-                <a
-                  href="https://michaelsparks13.github.io/severeWeatherProbability/"
-                  >Severe Weather Probability</a
-                >
-              </p>
-              <p class="pub-info">Powered by NOAA</p>
-            </div>
-          </div>
+    </section>
+    <section class="projects">
+        <div class="project-buttons">
+            <button id="allProjectsButton">All Projects</button>
+            <button id="interactiveButton">Interactive Maps</button>
+            <button id="staticButton">Static Maps</button>
+            <button id="journalismButton">Journalism</button>
         </div>
-      </section>
+    </section>
 
-      <!--JOURNALISM SECTION-->
+    <section class="project-cards" id="projectCards">
+        <!-- Project cards will be dynamically added here -->
+    </section>
 
-      <section class="journ" id="Journalism">
-        <div class="section-intro">
-          <h2>Some things I've written</h2>
-          <p>
-            I've been published in the #1 site for national parks news,
-            <span class="publication">National Parks Traveler</span> and I built
-            and run my own site,
-            <span class="publication">CrowdedParks.org</span>
-          </p>
-        </div>
+    <script src=script.js type="module"></script>
+</body>
 
-        <div class="proj-cards">
-          <div class="proj-card show-on-scroll">
-            <img class="proj-img" src="images/delmarva.jpeg" alt="sunset" />
-            <a
-              class="info"
-              href="https://www.crowdedparks.org/articles/delmarva.html"
-              >Climate Change is Coming for Delmarva</a
-            >
-          </div>
-
-          <div class="proj-card show-on-scroll">
-            <img
-              class="proj-img"
-              src="images/blueRidgeSunset copy.jpeg"
-              alt="mountains at sunset"
-            />
-            <a
-              class="info"
-              href="https://www.nationalparkstraveler.org/2022/02/room-grow-parks-eastern-us-more-you-realize"
-              >Room to Grow? For Parks in the Eastern U.S., More Than You
-              Realize
-              <p class="pub-info">
-                Originally published in
-                <span class="publication">National Parks Traveler</span>
-              </p>
-            </a>
-          </div>
-
-          <div class="proj-card show-on-scroll">
-            <img
-              class="proj-img"
-              src="images/egrets_chesapeakebay copy.jpeg"
-              alt="egrets in marsh"
-            />
-            <a
-              class="info"
-              href="https://www.nationalparkstraveler.org/podcast/2022-01-30-national-parks-traveler-episode-155-how-expand-eastern-national-parks"
-              >Podcast: How to Expand Eastern Parks</a
-            >
-          </div>
-
-          <div class="proj-card show-on-scroll">
-            <img
-              class="proj-img"
-              src="images/fins-breach copy.jpeg"
-              alt="barrier island"
-            />
-            <a
-              class="info"
-              href="https://www.nationalparkstraveler.org/2021/12/trust-and-science-what-parks-can-learn-fire-island-national-seashore"
-              >Trust And Science: What Parks Can Learn From Fire Island National
-              Seashore
-              <p class="pub-info">
-                Originally published in
-                <span class="publication">National Parks Traveler</span>
-              </p>
-            </a>
-          </div>
-
-          <div class="proj-card show-on-scroll">
-            <img
-              class="proj-img"
-              src="images/asis.jpeg"
-              alt="horses on beach"
-            />
-            <a
-              class="info"
-              href="https://www.crowdedparks.org/articles/assateague-island.html"
-              >The National Park Where Preservation Isn’t The Goal</a
-            >
-          </div>
-
-          <div class="proj-card show-on-scroll">
-            <img
-              class="proj-img"
-              src="images/acadia-crowding.jpeg"
-              alt="crowded stairs"
-            />
-            <a
-              class="info"
-              href="https://www.crowdedparks.org/articles/crowding-part-one.html"
-              >Are the National Parks Too Crowded? It’s Complicated.</a
-            >
-          </div>
-
-          <div class="proj-card show-on-scroll">
-            <img
-              class="proj-img"
-              src="images/saguaro census photo.jpeg"
-              alt="saguaro census"
-            />
-            <a
-              class="info"
-              href="https://www.crowdedparks.org/articles/volunteers-article.html"
-              >The National Parks’ Secret Weapon? Volunteers</a
-            >
-          </div>
-
-          <div id="see-more">
-            <p>The rest of my writing is at CrowdedParks.org</p>
-            <a class="btn link-btn" href="https://crowdedparks.org" target="_"
-              >See More</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!--CONTACT SECTION-->
-      <section class="contact" id="Contact">
-        <div class="section-intro">
-          <h2>Want to hire me?</h2>
-          <a
-            id="email-btn"
-            class="btn link-btn"
-            href="mailto:sparks@crowdedparks.org"
-            >Email me</a
-          >
-        </div>
-      </section>
-    </main>
-
-    <!--FOOTER-->
-    <footer>
-      <h3>Copyright &copy; Michael Sparks 2022</h3>
-    </footer>
-
-    <script src="js/app.js"></script>
-  </body>
 </html>
